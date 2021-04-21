@@ -1,3 +1,17 @@
+/*
+
+This file holds all the descriptions for a role
+
+Format:
+
+"role name": "You are the **role**. You can do this thing with the command `+thing [player number]`. After that thing, you can do this thing. Your aura is **Unknown** and your Team is **something**.",
+
+Add a line before the } at the bottom of the file, 
+and make sure the line you add has a comma on the end.
+
+*/
+
+
 module.exports = {
   "aura seer": "You are the **Aura Seer**. At night, you can select a player to see their aura (Good, Bad or Unknown). To check a player, use `+check [player number]`. You belong to the **Village**. Your aura is **Good**.",
   "seer": "You are the **Seer**. At night, you can select a player to see their role. To check a player, use `+check [player number]`. You belong to the **Village**. Your aura is **Good**.",
@@ -68,5 +82,5 @@ module.exports = {
   "random regular villager": "One of: `Aura Seer` `Avenger` `Beast Hunter` `Bodyguard` `Doctor` `Flower Child` `Grave Robber` `Grumpy Grandma` `Loudmouth` `Marksman` `Mayor` `Pacifist` `Priest` `Red Lady` `Seer Apprentice` `Sheriff` `Spirit Seer` `Tough Guy` `Villager` or `Witch`.",
   "pikathink": "You are a pika think pika pika pika",
   "alpha werewolf": "You are the **Alpha Werewolf**. Also known as `​alpha`​ or `​alpha ww`​! During night vote a non-werewolf player using `​+vote [player number]`​ and your vote will be **counted twice**. Your aura is **Evil**. You belong to the **Werewolf** team.",
-  "nightmare werewolf": "You are the **Nightmare Werewolf**. Also known as `​nww`​! During night, vote a non-werewolf player using `​+vote [player number]`​. Each day, you can nightmare a player using `​+nightmare [player number]`​. That player won't be able to use their abilities the following night. You can do this twice! Your aura is **Evil**. You belong to the **Werewolf** team."
+  "nightmare werewolf": "You are the **Nightmare Werewolf**. Also known as `​nww`​! During night, vote a non-werewolf player using `​+vote [player number]`​. Each day, you can nightmare a player using `​+nightmare [player number]`​. That player won't be able to use their abilities the following night. You can do this twice! Your aura is **Evil**. You belong to the **Werewolf** team.",
 }

@@ -1,3 +1,16 @@
+/*
+
+This file holds all the icons for a role
+
+Format:
+
+"role name": "link to image URL (generally emoji image URL)",
+
+Add a line before the } at the bottom of the file, 
+and make sure the line you add has a comma on the end.
+
+*/
+
 module.exports = {
   "aura seer": "https://cdn.discordapp.com/emojis/475775019834802198.png",
   "aura": "https://cdn.discordapp.com/emojis/475775019834802198.png",

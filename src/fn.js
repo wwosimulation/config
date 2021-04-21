@@ -1,6 +1,14 @@
+/*
+
+This file has helper functions for the bot
+Nothing in this file should be adjusted
+
+*/
+
+
+
 const { GuildMember } = require("discord.js")
 const ids = require("./ids.js")
-const db = require("quick.db")
 
 module.exports = {
   isBeta: (id) => {

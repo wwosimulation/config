@@ -1,17 +1,24 @@
-module.exports = {
-  colors: [
-    { name: "Blue", id: "606123652861394965" },
-    { name: "Yellow", id: "606123653469569084" },
-    { name: "Turquoise", id: "606123656535474187" },
-    { name: "Red", id: "606123651900899345" },
-    { name: "Crimson", id: "606123658016063507" },
-    { name: "Black", id: "606123654438453269" },
-    { name: "Pink", id: "606123655289634826" },
-    { name: "Green", id: "606123654106841088" },
-    { name: "Salmon", id: "606123655931494411" },
-  ],
-}
+/*
 
+This file holds all the information for the shop.
+Formats are given above each section.
+
+*/
+
+module.exports = {} // This initalizes the shop
+
+
+/*
+
+Format:
+{ id: "uniqueid", name: "Item Name", price: 100, currency: "rose", description: "Description Here", role: 102937912392173597},
+
+The ID is what will be checked when doing +buy.
+Generally this should be the first word of the name, in all lowercase
+The currency can be either "gem", "rose", or "coin"
+The role is the role given when the item is bought, delete that part if it doesn't give a role
+
+*/
 module.exports.items = [
   { id: "color", name: "Color Role", price: 50, currency: "coin", description: "See all the available colors by using `+shop colors`" },
   { id: "dj", name: "DJ Role", price: 450, currency: "coin", description: "Gain the ability to use the music bots both here and in a game!" },
@@ -27,3 +34,24 @@ module.exports.items = [
   { id: "icon", name: "Icon", price: 20, currency: "rose", description: "Add an icon to your profile!" },
   { id: "description", name: "Description", price: 25, currency: "rose", description: "Customize your profile description!" },
 ]
+
+
+/*
+
+This is for all the colors available for purchase
+Format:
+{ name: "Name in Shop", id: "roleidhere"},
+
+*/
+module.exports.colors = [
+  { name: "Blue", id: "606123652861394965" },
+  { name: "Yellow", id: "606123653469569084" },
+  { name: "Turquoise", id: "606123656535474187" },
+  { name: "Red", id: "606123651900899345" },
+  { name: "Crimson", id: "606123658016063507" },
+  { name: "Black", id: "606123654438453269" },
+  { name: "Pink", id: "606123655289634826" },
+  { name: "Green", id: "606123654106841088" },
+  { name: "Salmon", id: "606123655931494411" },
+]
+
