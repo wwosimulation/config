@@ -13,6 +13,7 @@ and make sure the line you add has a comma on the end.
 
 
 module.exports = {
+  "villager": "You are the **Villager**, also known as 'forkman'. You have no special abilities. You belong to the **Village**. Your aura is **Good**.",
   "aura seer": "You are the **Aura Seer**. At night, you can select a player to see their aura (Good, Bad or Unknown). To check a player, use `+check [player number]`. You belong to the **Village**. Your aura is **Good**.",
   "seer": "You are the **Seer**. At night, you can select a player to see their role. To check a player, use `+check [player number]`. You belong to the **Village**. Your aura is **Good**.",
   "serial killer": "You are **Serial Killer**. Also known as `sk`! Each night you can kill one player. You cannot be killed by the werewolves. You win if you are the last player alive. To kill a player, use `+stab [player number]`. Your aura is **Unknown**.",
