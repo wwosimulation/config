@@ -12,6 +12,7 @@ and make sure the line you add has a comma on the end.
 */
 
 module.exports = {
+  "villager": "https://cdn.discordapp.com/emojis/475776024253169675.png",
   "aura seer": "https://cdn.discordapp.com/emojis/475775019834802198.png",
   "aura": "https://cdn.discordapp.com/emojis/475775019834802198.png",
   "as": "https://cdn.discordapp.com/emojis/475775019834802198.png",
