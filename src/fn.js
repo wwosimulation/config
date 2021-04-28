@@ -40,5 +40,5 @@ module.exports.updateXP = (id, client) => {
 }
 
 module.exports.nextLevel = (level = 0) => {
-  return 1000 + (1000 * (1.5 * level))
+  return 500 + (500 * (0.5 * level))
 }
