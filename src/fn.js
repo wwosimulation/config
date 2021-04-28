@@ -28,7 +28,7 @@ module.exports.updateXP = (id, client) => {
   let guy = client.users.cache.get(id)
   let xp = client.db.get(`xp_${id}`) || 0
   let level = client.db.get(`level_${guy.id}`)
-  let req = module.exports.nextLevel(xp, level)
+  let req = module.exports.nextLevel(level)
   if(xp > req) {
       client.db.add(`lootbox_${guy.id}`, 1)
       client.db.add(`level_${guy.id}`, 1)
@@ -39,6 +39,6 @@ module.exports.updateXP = (id, client) => {
     
 }
 
-module.exports.nextLevel = (xp, level = 0) => {
+module.exports.nextLevel = (level = 0) => {
   return 1000 + (1000 * (1.5 * level))
 }
