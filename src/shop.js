@@ -21,8 +21,8 @@ The role is the role given when the item is bought, delete that part if it doesn
 */
 module.exports.items = [
   { id: "color", name: "Color Role", price: 50, currency: "coin", description: "See all the available colors by using `+shop colors`" },
-  { id: "special", name: "Special Color Role", price: 200, currency: "coin", description: "Get your own color role!" },
-  { id: "dj", name: "DJ Role", price: 450, currency: "coin", description: "Gain the ability to use the music bots both here and in a game!", role: "606123674562723840" },
+  { id: "special", name: "Special Color Role", price: 100, currency: "coin", description: "Get your own color role!" },
+  { id: "dj", name: "DJ Role", price: 300, currency: "coin", description: "Gain the ability to use the music bots both here and in a game!", role: "606123674562723840" },
   { id: "immunity", name: "Immunity", price: 10, currency: "rose", description: "When spectating, I will not change your name to lazy spectator", role: "691390867822477413" },
   { id: "profile", name: "Profile Command", price: 200, currency: "coin", description: "Gain the ability to use +profile" },
   { id: "ranked", name: "Ranked Pass", price: 250, currency: "coin", description: "Gain access to play ranked games!", role: "832845602009645116" },
