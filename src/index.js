@@ -25,6 +25,7 @@ module.exports = {
   shop: require("./shop.js"),
   cmi: require("./cmi.js"),
   xp: require("./xp.js"), 
+  rosewheel: require("./rosewheel.js"), 
   soloKillers: ["Serial Killer", "Arsonist", "Bomber", "Corruptor", "Cannibal", "Illusionist", "Bandit", "Alchemist"]
 }
 
