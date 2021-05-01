@@ -34,9 +34,9 @@ module.exports.items = [
   { id: "channel", name: "Private Channel", price: 100, currency: "rose", description: "Create your own private channel in this server!", role: "627539599862005760" },
   { id: "icon", name: "Icon", price: 20, currency: "rose", description: "Add an icon to your profile!" },
   { id: "description", name: "Description", price: 25, currency: "rose", description: "Customize your profile description!" },
-  { id: "Normal", name: "Item roulette", price: 0, currency: "coin", description: "Gain access to the item roulette channels to get color roles, role: "606123668162084894" },
-  { id: "Premium", name: "Premium item roulette", price: 25, currency: "coin", description: "Gives an higher chance on getting rare roles in item roulette, role: "606123666895274003" },
-  { id: "Elite", name: "Elite item roulette", price: 50, currency: "coin", description: "Gives the highest chance on getting rare roles in item roulette, role: "606123666257870868" },
+  { id: "normal", name: "Item roulette", price: 0, currency: "coin", description: "Gain access to the item roulette channels to get color roles", role: "606123668162084894" },
+  { id: "premium", name: "Premium item roulette", price: 25, currency: "coin", description: "Gives an higher chance on getting rare roles in item roulette", role: "606123666895274003" },
+  { id: "elite", name: "Elite item roulette", price: 50, currency: "coin", description: "Gives the highest chance on getting rare roles in item roulette", role: "606123666257870868" },
 
 ]
 
