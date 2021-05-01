@@ -26,7 +26,7 @@ module.exports.items = [
   { id: "immunity", name: "Immunity", price: 10, currency: "rose", description: "When spectating, I will not change your name to lazy spectator", role: "691390867822477413" },
   { id: "profile", name: "Profile Command", price: 200, currency: "coin", description: "Gain the ability to use +profile" },
   { id: "ranked", name: "Ranked Pass", price: 250, currency: "coin", description: "Gain access to play ranked games!", role: "832845602009645116" },
-  { id: "emoji", name: "Emoji", price: 450, currency: "coin", description: "Gain access to the `-write` command", role: "663389088354664477" },
+  { id: "emoji", name: "Emoji", price: 450, currency: "coin", description: "Gain access to the `+emoji` and `+emojilist` commands", role: "663389088354664477" },
   { id: "rose", name: "Rose", price: 25, currency: "coin", description: "Buy these to send someone a rose" },
   { id: "bouquet", name: "Rose Bouquet", price: 250, currency: "coin", description: "Use these to give everyone in the game a rose, including yourself!" },
   { id: "grey", name: "Grey Color Role", price: 200, currency: "coin", description: "Gain the very rare Grey Color role", role: "606123657210757136" },
