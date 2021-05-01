@@ -15,6 +15,7 @@ module.exports = {
   finishGame: 15,
   winStreak: 25,
   firstWinOfTheDay: 100,
+  narrator: 0,
 }
 
 // XP Values for each team
