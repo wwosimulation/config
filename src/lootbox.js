@@ -1,20 +1,21 @@
 /*
 
-This file holds the prizes for the rose wheel
-Generally lines should only be added by Shadow, but you
-can update the role IDs by simply replacing them.
+This file holds the prizes for the lootbox.
+Name: the name shown to the user
+Rate: higher rate = more common
+ID: One of "coin", "rose", "bouquet", "lootbox", "other"
+Amount: amount of prize to give
 
 
 */
 
 module.exports = [
-    {name: "5 coins", rate: 1},
-    {name: "10 coins", rate: 1},
-    {name: "25 coins", rate: 1},
-    {name: "25 coins", rate: 1},
-    {name: "50 coins", rate: 1},
-    {name: "1 rose", rate: 1},
-    {name: "1 rose bouquet", rate: 1},
-    {name: "Icon", rate: 1},
+    {name: "5 Coins", rate: 1, item: "coin", amount: 10},
+    {name: "10 Coins", rate: 1, item: "coin", amount: 10},
+    {name: "25 Coins", rate: 1, item: "coin", amount: 25},
+    {name: "25 Coins", rate: 1, item: "coin", amount: 25},
+    {name: "50 Coins", rate: 1, item: "coin", amount: 50},
+    {name: "1 Rose", rate: 1, item: "rose", amount: 1},
+    {name: "1 Rose Bouquet", rate: 1, item: "bouquet", amount: 1},
+    {name: "Icon", rate: 1, item: "other", amount: 1},
 ]
-
