@@ -8,15 +8,12 @@ can update the role IDs by simply replacing them.
 */
 
 module.exports = [
-    {name: "Prize", rate: 1},
-    {name: "Prize", rate: 1},
-    {name: "Prize", rate: 1},
-    {name: "Prize", rate: 1},
-    {name: "Prize", rate: 1},
-    {name: "Prize", rate: 1},
-    {name: "Prize", rate: 1},
-    {name: "Prize", rate: 1},
-    {name: "Prize", rate: 1},
-    {name: "Prize", rate: 1},
-    {name: "Prize", rate: 1},
+    {name: "100 coins", rate: 1},
+    {name: "100 coins", rate: 1},
+    {name: "250 coins", rate: 1},
+    {name: "250 coins", rate: 1},
+    {name: "500 coins", rate: 1},
+    {name: "Lootbox", rate: 1},
+    {name: "5 roses", rate: 1},
+    {name: "Icon", rate: 1},
 ]
