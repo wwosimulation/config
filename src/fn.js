@@ -49,6 +49,11 @@ module.exports.nextLevel = (level = 0) => {
   return 500 + (500 * (0.5 * level))
 }
 
+module.exports.emote = (name) => {
+  name.replace("-", " ")
+  return client.guilds.cache.get("465795320526274561").emojis.cache.find((e) => e.name.toLowerCase() === name.replace(" ", "_").toLowerCase())
+}
+
 module.exports.getUser = (input, message) => {
   if (!input) return message.member;
   let target = message.mentions.members.first();

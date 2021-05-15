@@ -60,3 +60,14 @@ module.exports.colors = [
   { name: "Salmon", id: "606123655931494411" },
 ]
 
+
+/*
+
+This is for all the icons available for purchase
+Format:
+{ name: "Name in Shop", image: "Image link here", id: "uniqueid"},
+
+*/
+module.exports.icons = [
+  
+]
