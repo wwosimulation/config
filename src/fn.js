@@ -17,9 +17,9 @@ module.exports = {
 }
 
 module.exports.isNarrator = (user) => {
-  if (!user instanceof GuildMember) return
-  let narroles = [ids.mini, ids.minisim, ids.narrator, ids.narratorsim]
-  let isNarr = user.roles.cache.filter((x) => narroles.includes(x.id))
+  if(!user.guild) throw new Error("Not a guild member")
+  let narroles = user.guild.id == ids.server.sim ? [ids.minisim, ids.narratorsim] : [ids.mini, ids.narrator]
+  let isNarr = user.roles?.cache.filter((x) => narroles.includes(x.id))
   if (isNarr.map((x) => x.id).length > 0) return true
   return false
 }
@@ -50,7 +50,10 @@ module.exports.nextLevel = (level = 0) => {
 }
 
 module.exports.emote = (name, client) => {
-  return client.emojis.cache.find(emoji => emoji.name.toLowerCase() == name.toLowerCase().replace(/ /g, "_")).toString()
+  if(!client) return "Client not given"
+  let e = client.emojis.cache.find(emoji => emoji.name.toLowerCase() == name.toLowerCase().replace(/ /g, "_"))?.toString()
+  if(e) return e 
+  return ""
 }
 
 module.exports.getUser = (input, message) => {
