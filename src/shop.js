@@ -65,9 +65,10 @@ module.exports.colors = [
 
 This is for all the icons available for purchase
 Format:
-{ name: "Name in Shop", image: "Image link here", id: "uniqueid"},
+{ name: "Name in Shop", image: "Image link here", id: "uniqueid", price: 0},
 
 */
 module.exports.icons = [
-  
+  { name: "Werewolf Berserk Redraw\nCredit to u/Tom_qx", image: "https://media.discordapp.net/attachments/833432936714862682/833433091480485938/berserkdraw.png", id: "wwberserk", price: 10},
+
 ]
