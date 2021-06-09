@@ -1,7 +1,4 @@
-
-module.exports = {}
-
-module.exports.teamMultipliers = {
+const teamMultipliers = {
     village: 3,
     werewolf: 4,
     couple: 5,
@@ -11,6 +8,8 @@ module.exports.teamMultipliers = {
     solovoting: 6,
     solokiller: 6
 }
+
+module.exports = {teamMultipliers}
 
 module.exports.streakXP = (streak) => {
     streak = parseInt(streak)
@@ -27,9 +26,15 @@ module.exports.fwotd = 80
 module.exports.win = (playerCount, team) => {
     playerCount = parseInt(playerCount)
     if(!playerCount) throw new Error(`${playerCount} is not a valid player count`)
-    team = team.replace(" ", "").replace("-", "")
-    if(!team) throw new Error(`${team} is not a valid team`)
-    
+    let val = 4 * playerCount * teamMultipliers[team]
+    return val
+}
+
+module.exports.lose = (playerCount) => {
+    playerCount = parseInt(playerCount)
+    if(!playerCount) throw new Error(`${playerCount} is not a valid player count`)
+    let val = 4 * playerCount 
+    return val
 }
 
 /*
