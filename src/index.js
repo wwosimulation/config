@@ -24,7 +24,8 @@ module.exports = {
   ids: require("./ids.js"),
   shop: require("./shop.js"),
   cmi: require("./cmi.js"),
-  xp: require("./xp.js"), 
+  xp: require("./oldxp.js"), 
+  newxp: require("./xp.js"), 
   rosewheel: require("./rosewheel.js"), 
   lootbox: require("./lootbox.js"), 
   soloKillers: ["Serial Killer", "Arsonist", "Bomber", "Corruptor", "Cannibal", "Illusionist", "Bandit", "Alchemist"]
