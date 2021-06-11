@@ -15,6 +15,10 @@ const getRole = (rolename) => {
 }
 
 module.exports = {
+  github: {
+    org: "wwosimulation",
+    repo: "Narrator-bot"
+  },
   emojis: {},
   getRole,
   allRoles,
