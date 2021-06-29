@@ -57,7 +57,7 @@ module.exports.colors = [
   { name: "Black", id: "606123654438453269" },
   { name: "Pink", id: "606123655289634826" },
   { name: "Green", id: "606123654106841088" },
-  { name: "Salmon", id: "606123655931494411" },
+  { name: "Orange", id: "606123655931494411" },
 ]
 
 
