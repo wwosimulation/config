@@ -14,5 +14,27 @@ Add a line before the } at the end, and make sure you have a comma at the end of
 module.exports = {
     "alias1": "role",
     "alias2": "role",
-    "alias3": "role 2"
+    "alias3": "role 2",
+    "aura seer": "aura",
+    "avenger": "ave",
+    "beast hunter": "bh",
+    "bodyguard": "bg",
+    "detective": "det",
+    "doctor": "doc",
+    "flower child": "fc",
+    "fortune teller": "ft",
+    "grave robber": "gr",
+    "grumpy grandma": "gg",
+    "loudmouth": "lm",
+    "marksman": "mm",
+    "medium": "med",
+    "pacifist": "paci",
+    "president": "pres",
+    "red lady": "rl",
+    "spirit seer": "ss",
+    "seer apprentice": "seer app",
+    "tough guy": "tg",
+    "villager": "forkman" ,
+    "villager": "fork",
+    "santa claus": "santa"
 }
