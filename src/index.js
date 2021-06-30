@@ -40,5 +40,6 @@ module.exports.emojis = {
   coin: `<:coin:606434686931173377>`,
   rose: `<:rosesingle:807256844191793158>`,
   gem: `<:gem:833431075309092904>`,
+  lootbox: `<:lootbox:808548473548963861>`,
   bouquet: `<:rosebouquet:808545517209387008>`,
 }
