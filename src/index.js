@@ -5,7 +5,8 @@ Nothing in this file should be adjusted unless instructed by Shadow
 
 */
 
-const { allRoles, roles, aliases } = require("./roles.js")
+const { allRoles, roles } = require("./roles.js")
+const aliases = require("./aliases.js")
 const getRole = (rolename) => {
   rolename = rolename.toLowerCase()
   rolename = rolename.replace("-", " ")
