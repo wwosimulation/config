@@ -12,9 +12,6 @@ Add a line before the } at the end, and make sure you have a comma at the end of
 */
 
 module.exports = {
-    "alias1": "role",
-    "alias2": "role",
-    "alias3": "role 2",
     "aura seer": "aura",
     "avenger": "ave",
     "beast hunter": "bh",
@@ -37,4 +34,29 @@ module.exports = {
     "villager": "forkman" ,
     "villager": "fork",
     "santa claus": "santa"
+    "alpha werewolf": "alpha",
+    "alpha werewolf": "aww",
+    "guardian werewolf": "gww",
+    "kitten werewolf": "kww",
+    "junior werewolf": "jww",
+    "shadow wolf": "sww",
+    "werewolf": "ww",
+    "sorcerer": "sorc",
+    "werewolf berserk": "bww",
+    "werewolf berserk": "wwb",
+    "werewolf berserk": "berserk",
+    "wolf pacifist": "wolf paci",
+    "wolf pacifist": "wwp",
+    "wolf shaman": "shaman ",
+    "wolf seer": "wws ",
+    "alchemist": "alc",
+    "arsonist": "arso",
+    "bomber": "bb",
+    "corruptor": "corr",
+    "Illusionist": "illu",
+    "serial killer": "sk",
+    "accomplice": "acc",
+     "sect leader": "sl",
+     "zombie": "zb",
+     "headhunter": "hh"
 }
