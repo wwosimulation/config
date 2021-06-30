@@ -5,10 +5,11 @@ Nothing in this file should be adjusted unless instructed by Shadow
 
 */
 
-const { allRoles, roles } = require("./roles.js")
+const { allRoles, roles, aliases } = require("./roles.js")
 const getRole = (rolename) => {
   rolename = rolename.toLowerCase()
   rolename = rolename.replace("-", " ")
+  rolename = aliases[rolename] ? aliases[rolename] : rolename
   let foundRole = roles.find((x) => x.name.toLowerCase() == rolename)
   if (!foundRole) return { name: "Unknown Role", description: "Unable to find that role!", icon: "https://cdn.discordapp.com/emojis/424929422190182422.png?v=1" }
   return foundRole
