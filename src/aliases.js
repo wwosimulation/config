@@ -33,7 +33,7 @@ module.exports = {
     "tg": "tough guy",
     "forkman": "villager" ,
     "fork": "villager",
-    "santa": "santa claus"
+    "santa": "santa claus",
     "alpha": "alpha werewolf",
     "aww": "alpha werewolf",
     "gww": "guardian werewolf",
