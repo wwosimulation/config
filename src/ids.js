@@ -13,7 +13,7 @@ module.exports = {
   player: "606131215526789120",
   staff: "606138123260264488",
   afkstaff: "612750104973017207",
-  mini: "606155761286119425", //Narrator Trainee in the game server
+  mini: "606276949689499648", //Narrator Trainee in the game server
   minisim: "606123620732895232", // Mini Narrator in the main server
   narrator: "606139219395608603", //Narrator in the game server
   narratorsim: "606123619999023114", //Narrator in the main server
