@@ -5,7 +5,11 @@ Formats are given above each section.
 
 */
 
-module.exports = {} // This initalizes the shop
+const emojis = require("./emojis.js")
+const { MessageEmbed } = require("discord.js")
+module.exports = {
+  pages: []
+} // This initalizes the shop
 
 
 /*
@@ -69,6 +73,20 @@ Format:
 
 */
 module.exports.icons = [
-  { name: "Werewolf Berserk Redraw\nCredit to u/Tom_qx", image: "https://media.discordapp.net/attachments/833432936714862682/833433091480485938/berserkdraw.png", id: "wwberserk", price: 10},
-
+  { name: "Werewolf Berserk Redraw\nCredit to u/Tom_qx", image: "https://media.discordapp.net/attachments/833432936714862682/833433091480485938/berserkdraw.png", id: "wwberserk", price: 10 },
 ]
+
+let embeds = [new MessageEmbed()]
+let addFooter = false
+
+for (let shopitem in module.exports.items) {
+  let item = module.exports.items[shopitem]
+  if (embeds[embeds.length - 1].fields.length == 5) embeds.push(new MessageEmbed())
+  embeds[embeds.length - 1].addField(`${item.name} - ${item.price} ${emojis[item.currency]}`, item.description)
+}
+for (let [i, embed] of embeds.entries()) {
+  embed.setFooter(`Page ${i + 1}/${embeds.length}`)
+  embed.setTitle("Wolvesville Simulation Store").setColor("#1FFF43")
+}
+
+module.exports.embeds = embeds
