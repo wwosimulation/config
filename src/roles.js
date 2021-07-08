@@ -45,6 +45,7 @@ let teams = {
   Werewolf: ["Werewolf", "Junior Werewolf", "Wolf Pacifist", "Shadow Wolf", "Wolf Seer", "Kitten Wolf", "Wolf Shaman", "Alpha Werewolf", "Werewolf Berserk", "Nightmare Werewolf", "Guardian Wolf", "Kitten Wolf", "Sorcerer", "Lone Wolf"],
   Zombie: ["Zombie"],
   Sect: ["Sect Leader", "Sect Member"],
+  Bandit: ["Bandit", "Accomplice"],
 }
 
 for (let aura in auras) {
