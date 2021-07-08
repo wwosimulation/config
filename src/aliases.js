@@ -31,7 +31,7 @@ module.exports = {
     "ss": "spirit seer",
     "seer app": "seer apprentice",
     "tg": "tough guy",
-    "forkman": "villager" ,
+    "forkman": "villager",
     "fork": "villager",
     "santa": "santa claus",
     "alpha": "alpha werewolf",
@@ -56,7 +56,8 @@ module.exports = {
     "Illu": "Illusionist",
     "sk": "serial killer",
     "acc": "accomplice",
-     "sl": "sect leader",
-     "zb": "zombie",
-     "hh": "headhunter"
+    "sl": "sect leader",
+    "zb": "zombie",
+    "hh": "headhunter",
+    "mort": "mortician",
 }
