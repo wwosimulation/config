@@ -8,9 +8,8 @@ Formats are given above each section.
 const emojis = require("./emojis.js")
 const { MessageEmbed } = require("discord.js")
 module.exports = {
-  pages: []
+  pages: [],
 } // This initalizes the shop
-
 
 /*
 
@@ -41,9 +40,7 @@ module.exports.items = [
   { id: "normal", name: "Normal item roulette", price: 0, currency: "coin", description: "Gain access to the item roulette channels to get color roles", role: "606123668162084894", response: "You now have access to the item roulette channels! Use ?ir to use the roulette." },
   { id: "premium", name: "Premium item roulette", price: 25, currency: "coin", description: "Gives an higher chance on getting rare roles in item roulette", role: "606123666895274003", response: "You now have an higher chance on rare items in item roulette! Use ?pir to use the elite roulette." },
   { id: "elite", name: "Elite item roulette", price: 50, currency: "coin", description: "Gives the highest chance on getting rare roles in item roulette", role: "606123666257870868", response: "You now have the highest chance on rare items in item roulette! Use ?eir to use the elite roulette." },
-
 ]
-
 
 /*
 
@@ -64,7 +61,6 @@ module.exports.colors = [
   { name: "Orange", id: "606123655931494411" },
 ]
 
-
 /*
 
 This is for all the icons available for purchase
@@ -72,9 +68,7 @@ Format:
 { name: "Name in Shop", image: "Image link here", id: "uniqueid", price: 0},
 
 */
-module.exports.icons = [
-  { name: "Werewolf Berserk Redraw\nCredit to u/Tom_qx", image: "https://media.discordapp.net/attachments/833432936714862682/833433091480485938/berserkdraw.png", id: "wwberserk", price: 10 },
-]
+module.exports.icons = [{ name: "Werewolf Berserk Redraw\nCredit to u/Tom_qx", image: "https://media.discordapp.net/attachments/833432936714862682/833433091480485938/berserkdraw.png", id: "wwberserk", price: 10 }]
 
 let embeds = [new MessageEmbed()]
 let addFooter = false

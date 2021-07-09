@@ -1,40 +1,40 @@
 const teamMultipliers = {
-    village: 3,
-    werewolf: 4,
-    couple: 5,
-    sect: 5,
-    zombie: 5,
-    bandit: 5,
-    solovoting: 6,
-    solokiller: 6
+  village: 3,
+  werewolf: 4,
+  couple: 5,
+  sect: 5,
+  zombie: 5,
+  bandit: 5,
+  solovoting: 6,
+  solokiller: 6,
 }
 
-module.exports = {teamMultipliers}
+module.exports = { teamMultipliers }
 
 module.exports.streakXP = (streak) => {
-    streak = parseInt(streak)
-    if(!streak) throw new Error(`${streak} is not a valid number`)
-    if(streak == 2) return 10
-    if(streak == 3) return 20
-    if(streak == 4) return 40
-    if(streak == 5) return 70
-    if(streak >= 6) return 100
+  streak = parseInt(streak)
+  if (!streak) throw new Error(`${streak} is not a valid number`)
+  if (streak == 2) return 10
+  if (streak == 3) return 20
+  if (streak == 4) return 40
+  if (streak == 5) return 70
+  if (streak >= 6) return 100
 }
 
 module.exports.fwotd = 80
 
 module.exports.win = (playerCount, team) => {
-    playerCount = parseInt(playerCount)
-    if(!playerCount) throw new Error(`${playerCount} is not a valid player count`)
-    let val = 4 * playerCount * teamMultipliers[team]
-    return val
+  playerCount = parseInt(playerCount)
+  if (!playerCount) throw new Error(`${playerCount} is not a valid player count`)
+  let val = 4 * playerCount * teamMultipliers[team]
+  return val
 }
 
 module.exports.lose = (playerCount) => {
-    playerCount = parseInt(playerCount)
-    if(!playerCount) throw new Error(`${playerCount} is not a valid player count`)
-    let val = 4 * playerCount 
-    return val
+  playerCount = parseInt(playerCount)
+  if (!playerCount) throw new Error(`${playerCount} is not a valid player count`)
+  let val = 4 * playerCount
+  return val
 }
 
 /*

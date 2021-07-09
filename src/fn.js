@@ -5,8 +5,6 @@ Nothing in this file should be adjusted
 
 */
 
-
-
 const { GuildMember } = require("discord.js")
 const ids = require("./ids.js")
 
@@ -17,16 +15,16 @@ module.exports = {
 }
 
 module.exports.isNarrator = (user) => {
-  if(!user.guild) throw new Error("Not a guild member")
+  if (!user.guild) throw new Error("Not a guild member")
   let narroles = user.guild.id == ids.server.sim ? [ids.minisim, ids.narratorsim] : [ids.mini, ids.narrator]
   let isNarr = user.roles?.cache.filter((x) => narroles.includes(x.id))
   if (isNarr.map((x) => x.id).length > 0) return true
   return false
 }
 module.exports.isStaff = (user) => {
-  if(!user.guild) throw new Error("Please pass a guildmember")
+  if (!user.guild) throw new Error("Please pass a guildmember")
   let member = user.client.guilds.cache.get(ids.server.sim).members.cache.get(user.id)
-  if(member.roles.cache.has(ids.staff) || member.roles.cache.has(ids.afkstaff)) return true
+  if (member.roles.cache.has(ids.staff) || member.roles.cache.has(ids.afkstaff)) return true
   return false
 }
 
@@ -35,75 +33,44 @@ module.exports.updateXP = (id, client) => {
   let xp = client.db.get(`xp_${id}`) || 0
   let level = client.db.get(`level_${guy.id}`)
   let req = module.exports.nextLevel(level)
-  if(xp > req) {
-      client.db.add(`lootbox_${guy.id}`, 1)
-      client.db.add(`level_${guy.id}`, 1)
-      guy.send(`Congrats! You have reached Level ${client.db.get(`level_${guy.id}`)}!\n\nYou have recieved a lootbox. To open it, do \`+use lootbox\`.`)
-      module.exports.updateXP(id, client)
+  if (xp > req) {
+    client.db.add(`lootbox_${guy.id}`, 1)
+    client.db.add(`level_${guy.id}`, 1)
+    guy.send(`Congrats! You have reached Level ${client.db.get(`level_${guy.id}`)}!\n\nYou have recieved a lootbox. To open it, do \`+use lootbox\`.`)
+    module.exports.updateXP(id, client)
   }
-
-    
 }
 
 module.exports.nextLevel = (level = 0) => {
-  return 500 + (500 * (0.5 * level))
+  return 500 + 500 * (0.5 * level)
 }
 
 module.exports.emote = (name, client) => {
-  if(!client) return "Client not given"
-  let e = client.emojis.cache.find(emoji => emoji.name.toLowerCase() == name.toLowerCase().replace(/ /g, "_"))?.toString()
-  if(e) return e 
+  if (!client) return "Client not given"
+  let e = client.emojis.cache.find((emoji) => emoji.name.toLowerCase() == name.toLowerCase().replace(/ /g, "_"))?.toString()
+  if (e) return e
   return ""
 }
 
 module.exports.getUser = (input, message) => {
-  if (!input) return message.member;
-  let target = message.mentions.members.first();
+  if (!input) return message.member
+  let target = message.mentions.members.first()
   if (target == null) {
-    target = message.guild.members.cache.find(
-      (member) =>
-        member.user.tag === input ||
-        member.user.id === input ||
-        member.user.username === input ||
-        (member.nickname !== null && member.nickname === input)
-    );
+    target = message.guild.members.cache.find((member) => member.user.tag === input || member.user.id === input || member.user.username === input || (member.nickname !== null && member.nickname === input))
   }
   if (target == null) {
-    target = message.guild.members.cache.find(
-      (member) =>
-        member.user.username.toLowerCase() +
-          "#" +
-          member.user.discriminator ===
-          input.toLowerCase() ||
-        member.user.username.toLowerCase() === input.toLowerCase() ||
-        (member.nickname !== null &&
-          member.nickname.toLowerCase() === input.toLowerCase())
-    );
+    target = message.guild.members.cache.find((member) => member.user.username.toLowerCase() + "#" + member.user.discriminator === input.toLowerCase() || member.user.username.toLowerCase() === input.toLowerCase() || (member.nickname !== null && member.nickname.toLowerCase() === input.toLowerCase()))
   }
   if (target == null) {
-    target = message.guild.members.cache.find(
-      (member) =>
-        member.user.username.startsWith(input) ||
-        member.user.username.toLowerCase().startsWith(input.toLowerCase())
-    );
+    target = message.guild.members.cache.find((member) => member.user.username.startsWith(input) || member.user.username.toLowerCase().startsWith(input.toLowerCase()))
   }
   if (target == null) {
-    target = message.guild.members.cache.find(
-      (member) =>
-        (member.nickname !== null && member.nickname.startsWith(input)) ||
-        (member.nickname !== null &&
-          member.nickname.toLowerCase().startsWith(input.toLowerCase()))
-    );
+    target = message.guild.members.cache.find((member) => (member.nickname !== null && member.nickname.startsWith(input)) || (member.nickname !== null && member.nickname.toLowerCase().startsWith(input.toLowerCase())))
   }
   if (target == null) {
-    target = message.guild.members.cache.find(
-      (member) =>
-        member.user.username.toLowerCase().includes(input.toLowerCase()) ||
-        (member.nickname !== null &&
-          member.nickname.toLowerCase().includes(input.toLowerCase()))
-    );
+    target = message.guild.members.cache.find((member) => member.user.username.toLowerCase().includes(input.toLowerCase()) || (member.nickname !== null && member.nickname.toLowerCase().includes(input.toLowerCase())))
   }
-  return target;
+  return target
 }
 
 module.exports.sleep = (ms) => {

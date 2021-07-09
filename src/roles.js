@@ -3,11 +3,6 @@ This file has functions to generate role info for the bot
 Nothing in this file should be adjusted without Shadow's assistance
 */
 
-
-
-
-
-
 const { Collection } = require("discord.js")
 const descriptions = require("./descriptions.js")
 const icons = require("./icons.js")
@@ -17,7 +12,7 @@ const defaultRole = {
   aura: "Unknown",
   team: "Solo",
   soloKiller: false,
-  description: "No description found"
+  description: "No description found",
 }
 
 module.exports = {
@@ -55,7 +50,7 @@ for (let aura in auras) {
 }
 
 for (let desc in descriptions) {
-  let name = desc.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
+  let name = desc.replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase())
   addRoleProperty(name, "description", descriptions[desc])
   addRoleProperty(name, "icon", icons[desc])
 }

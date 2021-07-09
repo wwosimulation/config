@@ -9,12 +9,12 @@ Amount: amount of prize to give
 */
 
 module.exports = [
-    {name: "5 Coins", id: "coin", amount: 10},
-    {name: "10 Coins", id: "coin", amount: 10},
-    {name: "25 Coins", id: "coin", amount: 25},
-    {name: "25 Coins", id: "coin", amount: 25},
-    {name: "50 Coins", id: "coin", amount: 50},
-    {name: "1 Rose", id: "roseG", amount: 1},
-    {name: "1 Rose Bouquet", id: "roseBouquet", amount: 1},
-    {name: "Icon", id: "iconinv", amount: 1},
+  { name: "5 Coins", id: "coin", amount: 10 },
+  { name: "10 Coins", id: "coin", amount: 10 },
+  { name: "25 Coins", id: "coin", amount: 25 },
+  { name: "25 Coins", id: "coin", amount: 25 },
+  { name: "50 Coins", id: "coin", amount: 50 },
+  { name: "1 Rose", id: "roseG", amount: 1 },
+  { name: "1 Rose Bouquet", id: "roseBouquet", amount: 1 },
+  { name: "Icon", id: "iconinv", amount: 1 },
 ]
