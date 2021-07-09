@@ -162,5 +162,6 @@ module.exports = {
   "pikathink": "https://cdn.discordapp.com/emojis/770660481500708894.png?v=1",
   "werewolf berserk": "https://cdn.discordapp.com/emojis/606431125476212737.png?v=1",
   "kitten wolf": "https://cdn.discordapp.com/emojis/701195174956498945.png?v=1",
-  "spectator": "https://cdn.discordapp.com/emojis/710062845550657587.png?v=1"
+  "spectator": "https://cdn.discordapp.com/emojis/710062845550657587.png?v=1",
+  "mortician": "https://cdn.discordapp.com/emojis/863076074844586004.png?v=1",
 }
