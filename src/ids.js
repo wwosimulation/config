@@ -10,6 +10,7 @@ can update the role IDs by simply replacing them.
 module.exports = {
   alive: "606140092213624859",
   dead: "606131202814115882",
+  revealed: "822806480099999774",
   player: "606131215526789120",
   staff: "606138123260264488",
   afkstaff: "612750104973017207",
