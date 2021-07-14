@@ -47,7 +47,7 @@ module.exports = {
   berserk: "werewolf berserk",
   "wolf paci": "wolf pacifist",
   wwp: "wolf pacifist",
-  shaman: "wolf shaman ",
+  shaman: "wolf shaman",
   wws: "wolf seer",
   alc: "alchemist",
   arso: "arsonist",
