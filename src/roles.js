@@ -61,7 +61,7 @@ for (let team in teams) {
   })
 }
 
-let soloKillers = ["Serial Killer", "Arsonist", "Bomber", "Corruptor", "Cannibal", "Illusionist", "Bandit", "Alchemist"]
+let soloKillers = ["Serial Killer", "Arsonist", "Bomber", "Corruptor", "Cannibal", "Illusionist", "Bandit", "Alchemist", "Hacker"]
 soloKillers.forEach((role) => {
   addRoleProperty(role, "soloKiller", true)
 })
