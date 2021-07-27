@@ -60,4 +60,6 @@ module.exports = {
   zb: "zombie",
   hh: "headhunter",
   mort: "mortician",
+  dc: "dreamcatcher",
+  prog: "prognosticator"
 }
