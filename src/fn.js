@@ -76,3 +76,7 @@ module.exports.getUser = (input, message) => {
 module.exports.sleep = (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
+
+module.exports.getEmoji = (name, client) => {
+  return client.emojis.cache.find(emoji => emoji.name.toLowerCase().replace(/_|-| /g, "") == name.toLowerCase().replace(/_|-| /g, ""))
+}

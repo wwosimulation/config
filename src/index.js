@@ -16,6 +16,9 @@ const getRole = (rolename) => {
   return foundRole
 }
 
+
+const { getEmoji } = require("./fn.js")
+
 module.exports = {
   github: {
     org: "wwosimulation",
@@ -25,6 +28,7 @@ module.exports = {
   getRole,
   allRoles,
   roles,
+  getEmoji,
   botadmins: ["406412325973786624", "439223656200273932"],
   fn: require("./fn.js"),
   ids: require("./ids.js"),
