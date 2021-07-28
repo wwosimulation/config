@@ -36,7 +36,7 @@ module.exports = {
   santa: "santa claus",
   alpha: "alpha werewolf",
   aww: "alpha werewolf",
-  gww: "guardian werewolf",
+  gww: "guardian wolf",
   kww: "kitten werewolf",
   jww: "junior werewolf",
   sww: "shadow wolf",
