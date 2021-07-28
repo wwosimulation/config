@@ -30,9 +30,9 @@ module.exports.isStaff = (user) => {
 
 module.exports.updateXP = (id, client) => {
   let guy = client.users.cache.get(id)
-  let xp = client.db.get(`xp_${id}`) || 0
   let level = client.db.get(`level_${guy.id}`)
   let data = await client.dbs.players.findOne({ user: id })
+  let xp = data.xp
   let req = module.exports.nextLevel(level)
   if (xp > req) {
    data.inventory.lootbox = data.inventory.lootbox + 1
