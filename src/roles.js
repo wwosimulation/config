@@ -32,7 +32,7 @@ const addRoleProperty = (rolename, property, value) => {
 }
 
 let auras = {
-  Good: ["Villager", "Loudmouth", "Santa Claus", "Easter Bunny", "Doctor", "Bodyguard", "Tough Guy", "Red Lady", "Priest", "Seer", "Aura Seer", "Spirit Seer", "Seer Apprentice", "Detective", "Sheriff", "Mayor", "Avenger", "Pacifist", "Flower Child", "Grumpy Grandma", "Cupid", "President", "Cursed", "Loudmouth", "Wise Man", "Sibling", "Idiot", "Handsome Prince", "Drunk", "Grave Robber"],
+  Good: ["Villager", "Loudmouth", "Santa Claus", "Easter Bunny", "Doctor", "Bodyguard", "Tough Guy", "Red Lady", "Priest", "Seer", "Aura Seer", "Spirit Seer", "Seer Apprentice", "Detective", "Sheriff", "Mayor", "Avenger", "Pacifist", "Flower Child", "Grumpy Grandma", "Cupid", "President", "Cursed", "Loudmouth", "Wise Man", "Sibling", "Idiot", "Handsome Prince", "Drunk", "Grave Robber", "Prognosticator"],
   Evil: ["Werewolf", "Junior Werewolf", "Wolf Pacifist", "Wolf Shaman", "Wolf Seer", "Shadow Wolf", "Wolf Pacifist", "Nightmare Werewolf", "Werewolf Berserk", "Kitten Wolf", "Guardian Wolf", "Sorcerer"],
 }
 let teams = {
