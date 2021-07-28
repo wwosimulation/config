@@ -28,7 +28,7 @@ module.exports.isStaff = (user) => {
   return false
 }
 
-module.exports.updateXP = (id, client) => {
+module.exports.updateXP = async (id, client) => {
   let guy = client.users.cache.get(id)
   let level = client.db.get(`level_${guy.id}`)
   let data = await client.dbs.players.findOne({ user: id })
