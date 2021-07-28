@@ -164,7 +164,7 @@ module.exports = {
   "kitten wolf": "https://cdn.discordapp.com/emojis/701195174956498945.png?v=1",
   spectator: "https://cdn.discordapp.com/emojis/710062845550657587.png?v=1",
   mortician: "https://cdn.discordapp.com/emojis/863076074844586004.png?v=1",
- "dreamcatcher": "https://media.discordapp.net/attachments/606123756271829012/869915580914876416/1627474429557.png",
-"prognosticator": "https://cdn.discordapp.com/attachments/494410148505321475/824031158761291837/Untitled146_20210206211029-1.png",
-"hacker" : "https://media.discordapp.net/attachments/859099353985974292/869924928332398622/Titelloses_8_20210727175848.png"
+ dreamcatcher: "https://media.discordapp.net/attachments/606123756271829012/869915580914876416/1627474429557.png",
+prognosticator: "https://cdn.discordapp.com/attachments/494410148505321475/824031158761291837/Untitled146_20210206211029-1.png",
+hacker: "https://media.discordapp.net/attachments/859099353985974292/869924928332398622/Titelloses_8_20210727175848.png"
 }
