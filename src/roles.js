@@ -36,7 +36,7 @@ let auras = {
   Evil: ["Werewolf", "Junior Werewolf", "Wolf Pacifist", "Wolf Shaman", "Wolf Seer", "Shadow Wolf", "Wolf Pacifist", "Nightmare Werewolf", "Werewolf Berserk", "Kitten Wolf", "Guardian Wolf", "Sorcerer"],
 }
 let teams = {
-  Village: ["Villager", "Doctor", "Bodyguard", "Tough Guy", "Red Lady", "Gunner", "Jailer", "Priest", "Marksman", "Seer", "Aura Seer", "Spirit Seer", "Seer Apprentice", "Detective", "Medium", "Mayor", "Witch", "Avenger", "Beast Hunter", "Pacifist", "Grumpy Grandma", "Cupid", "President", "Cursed", "Loudmouth", "Flower Child", "Sheriff", "Fortune Teller", "Forger", "Grave Robber", "Santa Claus", "Easter Bunny", "Sibling", "Drunk", "Mad Scientist", "Idiot", "Wise Man", "Doppelganger", "Naughty Boy", "Handsome Prince", "Sect Hunter", "Mortician"],
+  Village: ["Villager", "Doctor", "Bodyguard", "Tough Guy", "Red Lady", "Gunner", "Jailer", "Priest", "Marksman", "Seer", "Aura Seer", "Spirit Seer", "Seer Apprentice", "Detective", "Medium", "Mayor", "Witch", "Avenger", "Beast Hunter", "Pacifist", "Grumpy Grandma", "Cupid", "President", "Cursed", "Loudmouth", "Flower Child", "Sheriff", "Fortune Teller", "Forger", "Grave Robber", "Santa Claus", "Easter Bunny", "Sibling", "Drunk", "Mad Scientist", "Idiot", "Wise Man", "Doppelganger", "Naughty Boy", "Handsome Prince", "Sect Hunter", "Mortician", "Prognosticator"],
   Werewolf: ["Werewolf", "Junior Werewolf", "Wolf Pacifist", "Shadow Wolf", "Wolf Seer", "Kitten Wolf", "Wolf Shaman", "Alpha Werewolf", "Werewolf Berserk", "Nightmare Werewolf", "Guardian Wolf", "Kitten Wolf", "Sorcerer", "Lone Wolf"],
   Zombie: ["Zombie"],
   Sect: ["Sect Leader", "Sect Member"],
@@ -61,7 +61,7 @@ for (let team in teams) {
   })
 }
 
-let soloKillers = ["Serial Killer", "Arsonist", "Bomber", "Corruptor", "Cannibal", "Illusionist", "Bandit", "Alchemist", "Hacker"]
+let soloKillers = ["Serial Killer", "Arsonist", "Bomber", "Corruptor", "Cannibal", "Illusionist", "Bandit", "Alchemist", "Hacker", "Dreamcatcher"]
 soloKillers.forEach((role) => {
   addRoleProperty(role, "soloKiller", true)
 })
