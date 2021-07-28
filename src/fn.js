@@ -30,14 +30,16 @@ module.exports.isStaff = (user) => {
 
 module.exports.updateXP = (id, client) => {
   let guy = client.users.cache.get(id)
-  let xp = client.db.get(`xp_${id}`) || 0
   let level = client.db.get(`level_${guy.id}`)
+  let data = await client.dbs.players.findOne({ user: id })
+  let xp = data.xp
   let req = module.exports.nextLevel(level)
   if (xp > req) {
-    client.db.add(`lootbox_${guy.id}`, 1)
+   data.inventory.lootbox = data.inventory.lootbox + 1
     client.db.add(`level_${guy.id}`, 1)
     guy.send(`Congrats! You have reached Level ${client.db.get(`level_${guy.id}`)}!\n\nYou have recieved a lootbox. To open it, do \`+use lootbox\`.`)
     module.exports.updateXP(id, client)
+    data.save()
   }
 }
 
