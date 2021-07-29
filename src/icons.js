@@ -167,6 +167,6 @@ module.exports = {
  dreamcatcher: "https://media.discordapp.net/attachments/606123756271829012/869915580914876416/1627474429557.png",
 prognosticator: "https://cdn.discordapp.com/attachments/494410148505321475/824031158761291837/Untitled146_20210206211029-1.png",
 hacker: "https://media.discordapp.net/attachments/859099353985974292/869924928332398622/Titelloses_8_20210727175848.png",
-"wolf pacifist": "https://lh3.googleusercontent.com/keep-bbsk/AGk0z-Ojx_iN5coYh3fdr5wQhW4VlyCw4bWJXr_4xBCXEbiYdcaZdDLl1xXezHvOKwCkXi1FCZ4hVP6U99KqWYWy9EO7RFnCIdBuz9ObZ0w",
-"sorcerer": "https://lh4.googleusercontent.com/caMqalhHz3AbOwqNRnK5hoHNEOtuHHfTlLDinSUqZYgsCy2miQUnkAaEKIu3kS6zG4ecYbpGz89JlAL4l7mgjJ-1Ds576uJomUqxD9fbylkgxnLMMe2pwAiMJiCLf4vzS90by_6M"
+"wolf pacifist": "https://cdn.discordapp.com/emojis/721788690765971568.png?v=1",
+"sorcerer": "https://cdn.discordapp.com/emojis/612982059115216899.png?v=1"
 }
