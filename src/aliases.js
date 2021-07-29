@@ -53,7 +53,7 @@ module.exports = {
   arso: "arsonist",
   bb: "bomber",
   corr: "corruptor",
-  Illu: "Illusionist",
+  illu: "illusionist",
   sk: "serial killer",
   acc: "accomplice",
   sl: "sect leader",
