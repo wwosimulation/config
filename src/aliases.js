@@ -61,5 +61,6 @@ module.exports = {
   hh: "headhunter",
   mort: "mortician",
   dc: "dreamcatcher",
-  prog: "prognosticator"
+  prog: "prognosticator",
+ nww: "nightmare werewolf"
 }
