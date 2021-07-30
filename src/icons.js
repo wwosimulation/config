@@ -166,5 +166,7 @@ module.exports = {
   mortician: "https://cdn.discordapp.com/emojis/863076074844586004.png?v=1",
  dreamcatcher: "https://media.discordapp.net/attachments/606123756271829012/869915580914876416/1627474429557.png",
 prognosticator: "https://cdn.discordapp.com/attachments/494410148505321475/824031158761291837/Untitled146_20210206211029-1.png",
-hacker: "https://media.discordapp.net/attachments/859099353985974292/869924928332398622/Titelloses_8_20210727175848.png"
+hacker: "https://media.discordapp.net/attachments/859099353985974292/869924928332398622/Titelloses_8_20210727175848.png",
+"wolf pacifist": "https://cdn.discordapp.com/emojis/721788690765971568.png?v=1",
+"sorcerer": "https://cdn.discordapp.com/emojis/612982059115216899.png?v=1"
 }
