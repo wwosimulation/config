@@ -83,8 +83,9 @@ module.exports.getEmoji = (name, client) => {
   return client.emojis.cache.find(emoji => emoji.name.toLowerCase().replace(/_|-| /g, "") == name.toLowerCase().replace(/_|-| /g, ""))
 }
 
-module.exports.peaceCheck = (message, nightCount, db) => {
+module.exports.peaceCheck = (message, db) => {
   let prog = message.guild.channels.cache.filter((c) => c.name === "priv-prognosticator").map((x) => x.id)
+  let nightCount = db.get(`nightCount`)
   let res = []
   for (let i = 0; i < prog.length; i++) {
     let tempchan = message.guild.channels.cache.get(hacker[i])
