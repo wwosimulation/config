@@ -62,6 +62,6 @@ module.exports = {
   mort: "mortician",
   dc: "dreamcatcher",
   prog: "prognosticator",
- nww: "nightmare werewolf",
-canni: "cannibal"
+  nww: "nightmare werewolf",
+  canni: "cannibal"
 }
