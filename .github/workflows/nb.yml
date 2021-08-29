@@ -1,4 +1,4 @@
-name: Narrator Bot
+name: Prettier
 
 on: [push, pull_request]
 
@@ -17,23 +17,3 @@ jobs:
       - uses: actionsx/prettier@v2
         with:
           args: -w .
-  update:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-        with: 
-          repository: wwosimulation/Narrator-bot
-          token: ${{ secrets.SHADOW_TOKEN }}
-
-      - name: Pull & update submodules recursively
-        run: |
-          git submodule update --init --recursive
-          git submodule update --recursive --remote
-      - name: Commit
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git add --all
-          git commit -m "Update submodules" || echo "No changes to commit"
-          git push
