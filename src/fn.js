@@ -89,8 +89,8 @@ module.exports.peaceCheck = (message, db) => {
   let res = []
   for (let i = 0; i < prog.length; i++) {
     let tempchan = message.guild.channels.cache.get(prog[i])
-    let peace = db.get(`peace_${tempchan[i].id}`)
-    if (peace === nightCount) res.push(true)
+    let peace = db.get(`peace_${tempchan[i]}`)
+    if (peace && peace === nightCount) res.push(true)
   }
   if (res.includes(true)) return true
   else return false
