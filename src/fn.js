@@ -100,9 +100,9 @@ module.exports.dcActions = (message, db, alive) => {
     let tempchan
     let allChannels = message.guild.channels.cache.filter((c) => c.name.startsWith("priv-"))
     for (let i = 0; i < allChannels.length; i++) {
-        if (allChannels[i].name.includes(`dreamcatcher`)) tempchan = allChannels[i]
+        if (allChannels[i].name.includes(`dreamcatcher`)) tempchan = allChannels[i].id
     }
-    let hypnotized = db.get(`hypnotized_${tempchan.id}`)
+    let hypnotized = db.get(`hypnotized_${tempchan}`)
     let tempguy = message.guild.members.cache.find((m) => m.nickname === hypnotized)
     let role = message.guild.channels.cache.filter((c) => c.name === `priv-${db.get(`role_${tempguy.id}`).replace(" ", "-").toLowerCase()}`).map((x) => x.id)
     for (let b = 0; b < role.length; b++) {
