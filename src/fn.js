@@ -98,9 +98,9 @@ module.exports.peaceCheck = (message, db) => {
 
 module.exports.dcActions = (message, db, alive) => {
     let tempchan
-    let allChannels = message.guild.channels.cache.filter((c) => c.name.startsWith("priv-"))
-    for (let i = 0; i < allChannels.length; i++) {
-        if (allChannels[i].name.includes(`dreamcatcher`)) tempchan = allChannels[i].id
+    let dc = message.guild.channels.cache.filter((c) => c.name === "priv-dreamcatcher").map((x) => x.id)
+    for (let i = 0; i < dc.length; i++) {
+        tempchan = dc[i]
     }
     let hypnotized = db.get(`hypnotized_${tempchan}`)
     let tempguy = message.guild.members.cache.find((m) => m.nickname === hypnotized)
