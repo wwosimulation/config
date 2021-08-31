@@ -86,12 +86,10 @@ module.exports.getEmoji = (name, client) => {
 module.exports.peaceCheck = (message, db) => {
   let prog = message.guild.channels.cache.filter((c) => c.name === "priv-prognosticator").map((x) => x.id)
   let nightCount = db.get(`nightCount`)
-  let res = []
+  let res = false
   for (let i = 0; i < prog.length; i++) {
-    let tempchan = message.guild.channels.cache.get(prog[i])
-    let peace = db.get(`peace_${tempchan[i]}`)
-    if (peace && peace === nightCount) res.push(true)
+    let peace = db.get(`peace_${prog[i]}`) || "none"
+    if (peace !== "none" && peace === nightCount) res = true
   }
-  if (res.includes(true)) return true
-  else return false
+  return res
 }
