@@ -111,7 +111,8 @@ module.exports.dcActions = (message, db, alive) => {
             if (tempguy.roles.cache.has(alive.id)) {
                 return {
                     tempguy,
-                    chan
+                    chan,
+                    tempchan
                 }
             }
         }
