@@ -40,6 +40,7 @@ module.exports.items = [
   { id: "normal", name: "Normal item roulette", price: 0, currency: "coin", description: "Gain access to the item roulette channels to get color roles", role: "606123668162084894", response: "You now have access to the item roulette channels! Use ,ir to use the roulette." },
   { id: "premium", name: "Premium item roulette", price: 25, currency: "coin", description: "Gives an higher chance on getting rare roles in item roulette", role: "606123666895274003", response: "You now have an higher chance on rare items in item roulette! Use ,pir to use the elite roulette." },
   { id: "elite", name: "Elite item roulette", price: 50, currency: "coin", description: "Gives the highest chance on getting rare roles in item roulette", role: "606123666257870868", response: "You now have the highest chance on rare items in item roulette! Use ,eir to use the elite roulette." },
+  { id: "gamegifs", name: "Game GIFs", price: 10, currency: "rose", description: "When playing a game, you can now send GIFs from the /tenor command", role: "897895751965876335" }
 ]
 
 /*
