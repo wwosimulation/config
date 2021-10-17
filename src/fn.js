@@ -80,7 +80,7 @@ module.exports.sleep = (ms) => {
 }
 
 module.exports.getEmoji = (name, client) => {
-  return client.emojis.cache.find(emoji => emoji.name.toLowerCase().replace(/_|-| /g, "") == name.toLowerCase().replace(/_|-| /g, ""))
+  return client.emojis.cache.find(emoji => emoji.name.toLowerCase() == name.toLowerCase())
 }
 
 module.exports.peaceCheck = (message, db) => {
