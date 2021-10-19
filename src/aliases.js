@@ -65,5 +65,7 @@ module.exports = {
   dream: "dreamcatcher",
   prog: "prognosticator",
   nww: "nightmare werewolf",
-  canni: "cannibal"
+  canni: "cannibal",
+  pk: "pumpkin king",
+  pumpking: "pumpkin king"
 }
