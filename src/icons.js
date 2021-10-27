@@ -170,5 +170,6 @@ module.exports = {
   "wolf pacifist": "https://cdn.discordapp.com/emojis/721788690765971568.png?v=1",
   "sorcerer": "https://cdn.discordapp.com/emojis/612982059115216899.png?v=1",
   "pumpkin king": "https://cdn.discordapp.com/emojis/896288210584498207.png?v=1",
-  jack: "https://cdn.discordapp.com/emojis/902219707187339265.png?v=1"
+  jack: "https://cdn.discordapp.com/emojis/902219707187339265.png?v=1",
+  modded: "https://cdn.discordapp.com/emojis/902944768219287573.png?v=1"
 }

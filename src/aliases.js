@@ -67,5 +67,6 @@ module.exports = {
   nww: "nightmare werewolf",
   canni: "cannibal",
   pk: "pumpkin king",
-  pumpking: "pumpkin king"
+  pumpking: "pumpkin king",
+  mod: "modded"
 }
