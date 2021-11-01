@@ -5,6 +5,7 @@ const teamMultipliers = {
   sect: 5,
   zombie: 5,
   bandit: 5,
+  modded: 5,
   solovoting: 6,
   solokiller: 6,
 }
