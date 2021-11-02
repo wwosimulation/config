@@ -61,7 +61,12 @@ module.exports = {
   hh: "headhunter",
   mort: "mortician",
   dc: "dreamcatcher",
+  pk: "pumpkin king",
+  dream: "dreamcatcher",
   prog: "prognosticator",
   nww: "nightmare werewolf",
-  canni: "cannibal"
+  canni: "cannibal",
+  pk: "pumpkin king",
+  pumpking: "pumpkin king",
+  mod: "modded"
 }

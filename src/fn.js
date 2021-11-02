@@ -56,7 +56,8 @@ module.exports.emote = (name, client) => {
 
 module.exports.getUser = (input, message) => {
   if (!input) return message.member
-  let target = message.mentions.members.first()
+  input.replace(/([<@!>])+/g, "")
+  let target = message.guild.members.cache.get(input)
   if (target == null) {
     target = message.guild.members.cache.find((member) => member.user.tag === input || member.user.id === input || member.user.username === input || (member.nickname !== null && member.nickname === input))
   }
@@ -80,7 +81,7 @@ module.exports.sleep = (ms) => {
 }
 
 module.exports.getEmoji = (name, client) => {
-  return client.emojis.cache.find(emoji => emoji.name.toLowerCase().replace(/_|-| /g, "") == name.toLowerCase().replace(/_|-| /g, ""))
+  return client.emojis.cache.find(emoji => emoji.name.toLowerCase() == name.toLowerCase())
 }
 
 module.exports.peaceCheck = (message, db) => {

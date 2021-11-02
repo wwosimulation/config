@@ -21,6 +21,7 @@ module.exports = {
   narrator: "892046204853170226", //Narrator in the game server
   narratorsim: "606123619999023114", //Narrator in the main server
   spectator: "892046208061800468",
+  jowov: "892046203573915689",
   server: {
     log: "693157346771468289",
     sim: "465795320526274561",

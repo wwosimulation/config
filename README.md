@@ -14,3 +14,5 @@ Format:
 
 */
 ```
+
+If you need any help, ask any of the Dev Assistants!
