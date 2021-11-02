@@ -3,7 +3,7 @@
 This file holds the prizes for the rose wheel.
 Name: the name shown to the user
 Rate: higher rate = more common
-ID: One of "coin", "rose", "bouquet", "lootbox", "other"
+Item: location of the data to be updated
 Amount: amount of prize to give
 
 
