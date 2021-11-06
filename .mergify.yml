@@ -17,6 +17,7 @@ pull_request_rules:
   - name: Autoreviewer
     conditions:
       - -closed
+      - -draft
     actions:
       request_reviews:
         users:
