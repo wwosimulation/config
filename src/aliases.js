@@ -68,5 +68,6 @@ module.exports = {
   canni: "cannibal",
   pk: "pumpkin king",
   pumpking: "pumpkin king",
-  mod: "modded"
+  mod: "modded",
+  astral: "astral wolf"
 }
