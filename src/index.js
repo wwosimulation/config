@@ -29,7 +29,7 @@ module.exports = {
   allRoles,
   roles,
   getEmoji,
-  botadmins: ["406412325973786624", "439223656200273932"],
+  botadmins: ["406412325973786624", "439223656200273932", "517335997172809728"],
   fn: require("./fn.js"),
   ids: require("./ids.js"),
   shop: require("./shop.js"),
