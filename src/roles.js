@@ -1,13 +1,13 @@
 /*
 This file has functions to generate role info for the bot
-Nothing in this file should be adjusted without Shadow's assistance
+Nothing in this file should be adjusted without a developer's assistance
 */
 
 const { Collection } = require("discord.js")
 const descriptions = require("./descriptions.js")
 const icons = require("./icons.js")
 const defaultRole = {
-  name: "Error! Please inform Shadow about this!",
+  name: "Error! Please inform the developers about this!",
   icon: "https://cdn.discordapp.com/emojis/424929422190182422.png?v=1",
   aura: "Unknown",
   team: "Solo",

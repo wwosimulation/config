@@ -6,7 +6,7 @@ Format:
 
 "id": number,
 
-The ID is given by Shadow
+The ID is given by Developers
 
 */
 

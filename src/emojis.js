@@ -6,7 +6,7 @@ Format:
 
 "id": "<:emoji:1234567890>",
 
-The ID is given by Shadow
+The ID is given by dev assistants
 
 */
 
