@@ -9,7 +9,7 @@ Amount: amount of prize to give
 */
 
 module.exports = [
-  { name: "5 Coins", id: "coin", amount: 10 },
+  { name: "5 Coins", id: "coin", amount: 5 },
   { name: "10 Coins", id: "coin", amount: 10 },
   { name: "25 Coins", id: "coin", amount: 25 },
   { name: "25 Coins", id: "coin", amount: 25 },
