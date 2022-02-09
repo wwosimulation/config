@@ -70,4 +70,5 @@ module.exports = {
   pumpking: "pumpkin king",
   mod: "modded",
   astral: "astral wolf"
+  kitten: "kitten wolf"
 }
