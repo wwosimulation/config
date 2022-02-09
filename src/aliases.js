@@ -69,5 +69,6 @@ module.exports = {
   pk: "pumpkin king",
   pumpking: "pumpkin king",
   mod: "modded",
-  astral: "astral wolf"
+  astral: "astral wolf",
+  kitten: "kitten wolf"
 }
