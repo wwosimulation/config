@@ -172,5 +172,13 @@ module.exports = {
   "pumpkin king": "https://cdn.discordapp.com/emojis/896288210584498207.png?v=1",
   jack: "https://cdn.discordapp.com/emojis/902219707187339265.png?v=1",
   modded: "https://cdn.discordapp.com/emojis/902944768219287573.png?v=1",
-  "astral wolf": "https://cdn.discordapp.com/emojis/906977150559739954.png?v=1"
+  "astral wolf": "https://cdn.discordapp.com/emojis/906977150559739954.png?v=1",
+  "Evil detective": "https://cdn.discordapp.com/emojis/941377444961738752.png?v=1",
+  Baker: "https://cdn.discordapp.com/emojis/935199469564219393.png?v=1",
+ Preacher: "https://cdn.discordapp.com/emojis/930841335525703711.png?v=1",
+"Easter bunny": "https://cdn.discordapp.com/emojis/899584126632464386.png?v=1",
+Vigilante: "https://cdn.discordapp.com/emojis/923194555732459551.png?v=1",
+"Split wolf": "https://cdn.discordapp.com/emojis/923172879133179945.png?v=1",
+"Wolf trickster": "https://cdn.discordapp.com/emojis/935229474113486888.png?v=1",
+"Ghost lady": "https://cdn.discordapp.com/emojis/941377242527834122.png?v=1"
 }
