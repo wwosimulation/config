@@ -121,3 +121,11 @@ module.exports.dcActions = (message, db, alive) => {
 module.exports.capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
+
+module.exports.logs = ({player, target, interaction, emoji, client, additional}) => {
+  let db = require("quick.db")
+  emoji = module.exports.getEmoji(emoji, client) ?? ""
+  let x = db.get("logs")
+  x.unshift(`${emoji} ${player.nickname} ${interaction} ${target} ${additional ? additional : ""}\n`)
+  db.set("logs", x)
+}
