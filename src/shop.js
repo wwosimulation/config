@@ -29,7 +29,7 @@ module.exports.items = [
   { id: "dj", name: "DJ Role", price: 300, currency: "coin", description: "Gain the ability to use the music bots both here and in a game!", role: "606123674562723840" },
   //{ id: "icon", name: "Icon", price: 20, currency: "rose", description: "Add an icon to your profile!" },
   { id: "description", name: "Description", price: 25, currency: "rose", description: "Customize your profile description!" },
-  { id: "immunity", name: "Immunity", price: 10, currency: "rose", description: "When spectating, I will not change your name to lazy spectator", role: "691390867822477413" },
+  { id: "immunity", name: "Immunity", price: 10, currency: "rose", description: "When spectating, I will not change your name to lazy spectator", role: "691390867822477413", response: "You can change your description with `+use description <desc...>`" },
   { id: "gamegifs", name: "Game GIFs", price: 10, currency: "rose", description: "When playing a game, you can now send GIFs from the /tenor command", role: "897895751965876335" },
   { id: "color", name: "Color Role", price: 50, currency: "coin", description: "See all the available colors by using `+shop colors`" },
   { id: "special", name: "Special Color Role", price: 400, currency: "coin", description: "Get your own color role!" },
@@ -41,7 +41,7 @@ module.exports.items = [
   { id: "normal", name: "Normal Item Roulette", price: 10, currency: "coin", description: "Gain access to the item roulette channels to get color roles", role: "606123668162084894", response: "You now have access to the item roulette channels! Use ,ir to use the roulette." },
   { id: "premium", name: "Premium Item Roulette", price: 25, currency: "coin", description: "Gives an higher chance on getting rare roles in item roulette", role: "606123666895274003", response: "You now have an higher chance on rare items in item roulette! Use ,pir to use the elite roulette." },
   { id: "elite", name: "Elite Item Roulette", price: 50, currency: "coin", description: "Gives the highest chance on getting rare roles in item roulette", role: "606123666257870868", response: "You now have the highest chance on rare items in item roulette! Use ,eir to use the elite roulette." },
-  { id: "lottery", name: "Lottery ticket", price: 20, currency: "coin", description: "Get a ticket to take part in the lottery!", role: "947629828771831888", response: "You can now entry lottery giveaways 🥳"}
+  { id: "lottery", name: "Lottery ticket", price: 5, currency: "coin", description: "Get a ticket to take part in the lottery!", role: "947629828771831888", response: "You can now entry lottery giveaways 🥳"}
 ]
 
 /*
