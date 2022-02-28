@@ -27,20 +27,21 @@ module.exports.items = [
   { id: "bouquet", name: "Rose Bouquet", price: 250, currency: "coin", description: "Use these to give everyone in the game a rose, including yourself!" },
   { id: "profile", name: "Profile Command", price: 200, currency: "coin", description: "Gain the ability to use `+profile`" },
   { id: "dj", name: "DJ Role", price: 300, currency: "coin", description: "Gain the ability to use the music bots both here and in a game!", role: "606123674562723840" },
-  { id: "icon", name: "Icon", price: 20, currency: "rose", description: "Add an icon to your profile!" },
+  //{ id: "icon", name: "Icon", price: 20, currency: "rose", description: "Add an icon to your profile!" },
   { id: "description", name: "Description", price: 1, currency: "gem", description: "Customize your profile description!" },
   { id: "immunity", name: "Immunity", price: 10, currency: "rose", description: "When spectating, I will not change your name to lazy spectator", role: "691390867822477413" },
   { id: "gamegifs", name: "Game GIFs", price: 10, currency: "rose", description: "When playing a game, you can now send GIFs from the /tenor command", role: "897895751965876335" },
   { id: "color", name: "Color Role", price: 50, currency: "coin", description: "See all the available colors by using `+shop colors`" },
   { id: "special", name: "Special Color Role", price: 100, currency: "coin", description: "Get your own color role!" },
   { id: "grey", name: "Grey Color Role", price: 200, currency: "coin", description: "Gain the very rare Grey Color role", role: "606123657210757136" },
-  { id: "ranked", name: "Ranked Pass", price: 250, currency: "coin", description: "Gain access to play ranked games!", role: "832845602009645116" },
-  { id: "emoji", name: "Emoji", price: 450, currency: "coin", description: "Gain access to the `+emoji` and `+emojilist` commands", role: "663389088354664477" },
-   //{ id: "cmi", name: "Custom Maker Item", price: 1000, currency: "coin", description: "You can use this to create your own role list when playing.\nThis does not give you the full set of role list. You need to buy the rest of the roles using coins or roses. To check the list, do `+cmi`!" },
+  //{ id: "ranked", name: "Ranked Pass", price: 250, currency: "coin", description: "Gain access to play ranked games!", role: "832845602009645116" },
+  //{ id: "emoji", name: "Emoji", price: 450, currency: "coin", description: "Gain access to the `+emoji` and `+emojilist` commands", role: "663389088354664477" },
+  //{ id: "cmi", name: "Custom Maker Item", price: 1000, currency: "coin", description: "You can use this to create your own role list when playing.\nThis does not give you the full set of role list. You need to buy the rest of the roles using coins or roses. To check the list, do `+cmi`!" },
   { id: "channel", name: "Private Channel", price: 100, currency: "rose", description: "Create your own private channel in this server!", role: "627539599862005760" },
   { id: "normal", name: "Normal Item Roulette", price: 0, currency: "coin", description: "Gain access to the item roulette channels to get color roles", role: "606123668162084894", response: "You now have access to the item roulette channels! Use ,ir to use the roulette." },
   { id: "premium", name: "Premium Item Roulette", price: 25, currency: "coin", description: "Gives an higher chance on getting rare roles in item roulette", role: "606123666895274003", response: "You now have an higher chance on rare items in item roulette! Use ,pir to use the elite roulette." },
-  { id: "elite", name: "Elite Item Roulette", price: 50, currency: "coin", description: "Gives the highest chance on getting rare roles in item roulette", role: "606123666257870868", response: "You now have the highest chance on rare items in item roulette! Use ,eir to use the elite roulette." }
+  { id: "elite", name: "Elite Item Roulette", price: 50, currency: "coin", description: "Gives the highest chance on getting rare roles in item roulette", role: "606123666257870868", response: "You now have the highest chance on rare items in item roulette! Use ,eir to use the elite roulette." },
+  { id: "lottery", name: "Lottery ticket", price: 20, currency: "coin", description: "Get a ticket to take part in the lottery!", role: "947629828771831888", response: "You can now entry lottery giveaways 🥳"}
 ]
 
 /*
@@ -80,7 +81,7 @@ for (let shopitem in module.exports.items) {
   embeds[embeds.length - 1].addField(`${item.name} - ${item.price} ${emojis[item.currency]}`, item.description)
 }
 for (let [i, embed] of embeds.entries()) {
-  embed.setFooter(`Page ${i + 1}/${embeds.length}`)
+  embed.setFooter({text: `Page ${i + 1}/${embeds.length}`})
   embed.setTitle("Wolvesville Simulation Store").setColor("#1FFF43")
 }
 
