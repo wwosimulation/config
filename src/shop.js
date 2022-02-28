@@ -32,7 +32,7 @@ module.exports.items = [
   { id: "immunity", name: "Immunity", price: 10, currency: "rose", description: "When spectating, I will not change your name to lazy spectator", role: "691390867822477413" },
   { id: "gamegifs", name: "Game GIFs", price: 10, currency: "rose", description: "When playing a game, you can now send GIFs from the /tenor command", role: "897895751965876335" },
   { id: "color", name: "Color Role", price: 50, currency: "coin", description: "See all the available colors by using `+shop colors`" },
-  { id: "special", name: "Special Color Role", price: 100, currency: "coin", description: "Get your own color role!" },
+  { id: "special", name: "Special Color Role", price: 400, currency: "coin", description: "Get your own color role!" },
   { id: "grey", name: "Grey Color Role", price: 200, currency: "coin", description: "Gain the very rare Grey Color role", role: "606123657210757136" },
   //{ id: "ranked", name: "Ranked Pass", price: 250, currency: "coin", description: "Gain access to play ranked games!", role: "832845602009645116" },
   //{ id: "emoji", name: "Emoji", price: 450, currency: "coin", description: "Gain access to the `+emoji` and `+emojilist` commands", role: "663389088354664477" },
