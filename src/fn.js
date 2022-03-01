@@ -121,3 +121,18 @@ module.exports.dcActions = (message, db, alive) => {
 module.exports.capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
+
+module.exports.randomWeight = (options) => { 
+  var i; 
+  var weights = []; 
+  for (i = 0; i < options.length; i++) {
+    weights[i] = parseInt(Object.values(options[i])) + (weights[i - 1] || 0); 
+  }
+  
+  var random = Math.random() * weights[weights.length - 1]; 
+  for (i = 0; i < weights.length; i++) {
+    if (weights[i] > random) {
+      break; 
+    }
+  }
+}
