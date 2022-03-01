@@ -135,4 +135,5 @@ module.exports.randomWeight = (options) => {
       break; 
     }
   }
+  return Object.keys(options[i])[0] 
 }
