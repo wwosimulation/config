@@ -72,7 +72,7 @@ module.exports = {
   astral: "astral wolf",
   kitten: "kitten wolf",
   sect: "sect leader",
-gl: "ghost lady",
-ed: "evil detective",
-spww: "split wolf",
+  gl: "ghost lady",
+  ed: "evil detective",
+  spww: "split wolf",
 }
