@@ -180,5 +180,6 @@ module.exports = {
 vigilante: "https://cdn.discordapp.com/emojis/923194555732459551.png?v=1",
 "split wolf": "https://cdn.discordapp.com/emojis/923172879133179945.png?v=1",
 "wolf trickster": "https://cdn.discordapp.com/emojis/935229474113486888.png?v=1",
-"ghost lady": "https://cdn.discordapp.com/emojis/941377242527834122.png?v=1"
+"ghost lady": "https://cdn.discordapp.com/emojis/941377242527834122.png?v=1",
+"warden": "https://cdn.discordapp.com/emojis/954007122532761630.png"
 }
