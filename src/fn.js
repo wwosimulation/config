@@ -5,7 +5,7 @@ Nothing in this file should be adjusted
 
 */
 
-const { GuildMember } = require("discord.js")
+const { GuildMember, MessageActionRow } = require("discord.js")
 const ids = require("./ids.js")
 
 module.exports = {
@@ -136,4 +136,19 @@ module.exports.randomWeight = (options) => {
     }
   }
   return Object.keys(options[i])[0] 
+}
+
+module.exports.disableButtons = (message) => {
+  message.components.forEach(comp => {
+    let btns = comp.components
+    btns.forEach((x) => {
+      x.setDisabled(true)
+    })
+  })
+
+  let sendData = {}
+  if (message.content) sendData.content = message.content
+  if (message.embeds) sendData.embeds = message.embeds
+  if (message.components) sendData.components = message.components
+  return sendData
 }
