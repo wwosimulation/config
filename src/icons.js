@@ -163,7 +163,7 @@ module.exports = {
   "werewolf berserk": "https://cdn.discordapp.com/emojis/606431125476212737.png?v=1",
   "kitten wolf": "https://cdn.discordapp.com/emojis/957276245006110802.png",
   spectator: "https://cdn.discordapp.com/emojis/710062845550657587.png?v=1",
-  mortician: "https://cdn.discordapp.com/emojis/863076074844586004.png?v=1",
+  undertaker: "https://cdn.discordapp.com/emojis/863076074844586004.png?v=1",
   dreamcatcher: "https://cdn.discordapp.com/emojis/786278096381804564.png?v=1",
   prognosticator: "https://cdn.discordapp.com/attachments/494410148505321475/824031158761291837/Untitled146_20210206211029-1.png",
   hacker: "https://media.discordapp.net/attachments/859099353985974292/869924928332398622/Titelloses_8_20210727175848.png",
