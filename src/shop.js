@@ -35,7 +35,7 @@ module.exports.items = [
   { id: "special", name: "Special Color Role", price: 400, currency: "coin", description: "Get your own color role!" },
   { id: "grey", name: "Grey Color Role", price: 200, currency: "coin", description: "Gain the very rare Grey Color role", role: "606123657210757136" },
   //{ id: "ranked", name: "Ranked Pass", price: 250, currency: "coin", description: "Gain access to play ranked games!", role: "832845602009645116" },
-  //{ id: "emoji", name: "Emoji", price: 450, currency: "coin", description: "Gain access to the `+emoji` and `+emojilist` commands", role: "663389088354664477" },
+  { id: "emoji", name: "Emoji", price: 450, currency: "coin", description: "Gain access to `+write` command. Note the `+emoji` and `+emojilist ` are in progress and will be fixed asap.", role: "663389088354664477" },
   //{ id: "cmi", name: "Custom Maker Item", price: 1000, currency: "coin", description: "You can use this to create your own role list when playing.\nThis does not give you the full set of role list. You need to buy the rest of the roles using coins or roses. To check the list, do `+cmi`!" },
   { id: "channel", name: "Private Channel", price: 100, currency: "rose", description: "Create your own private channel in this server!", role: "627539599862005760" },
   { id: "normal", name: "Normal Item Roulette", price: 10, currency: "coin", description: "Gain access to the item roulette channels to get color roles", role: "606123668162084894", response: "You now have access to the item roulette channels! Use ,ir to use the roulette." },
