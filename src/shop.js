@@ -40,7 +40,7 @@ module.exports.items = [
   { id: "normal", name: "Normal Item Roulette", price: 10, currency: "coin", description: "Gain access to the item roulette channels to get color roles", role: "606123668162084894", response: "You now have access to the item roulette channels! Use ,ir to use the roulette." },
   { id: "premium", name: "Premium Item Roulette", price: 25, currency: "coin", description: "Gives an higher chance on getting rare roles in item roulette", role: "606123666895274003", response: "You now have an higher chance on rare items in item roulette! Use ,pir to use the elite roulette." },
   { id: "elite", name: "Elite Item Roulette", price: 50, currency: "coin", description: "Gives the highest chance on getting rare roles in item roulette", role: "606123666257870868", response: "You now have the highest chance on rare items in item roulette! Use ,eir to use the elite roulette." },
-  { id: "auto", name: "Auto Reaction", price: 5, currency: "gem", description: "Get a auto reaction whenever someone pings you!", response: "Ask the staffs to get it at a appropriate place but before asking keep in mind that Carl bot must be in the server with emoji."}
+  { id: "auto", name: "Auto Reaction", price: 5, currency: "gem", description: "Get an auto reaction whenever someone pings you!", response: "Ask a staff member to get it at an appropriate place but before asking keep in mind that Carl bot must be in the server with the emoji."}
 ]
 
 /*
