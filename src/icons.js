@@ -184,5 +184,11 @@ module.exports = {
   "random werewolf": "https://cdn.discordapp.com/emojis/957263333008998460.png",
   ritualist: "https://cdn.discordapp.com/emojis/956865154824421396.png",
   mortician: "https://cdn.discordapp.com/emojis/956864967804616755.png",
-  "night watchman": "https://cdn.discordapp.com/emojis/956200892288348221.png",
+  "night watchman": 
+  instigator: "https://cdn.discordapp.com/emojis/960537336431652914.png",
+  analyst: "https://cdn.discordapp.com/emojis/960538376317075526.png", 
+  "stubborn werewolf": "https://cdn.discordapp.com/emojis/960538550300987444.png", 
+  "werewolf fan": "https://cdn.discordapp.com/emojis/960537858375037029.png",
+  "voodoo werewolf":"https://cdn.discordapp.com/emojis/960537822551498882.png",
+  trapper: "https://cdn.discordapp.com/emojis/960537476781453363.png",
 }
