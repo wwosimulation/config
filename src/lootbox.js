@@ -2,7 +2,7 @@
 
 This file holds the prizes for the lootbox.
 Name: the name shown to the user
-ID: One of "coin", "rose", "bouquet", "lootbox", "other"
+ID: One of "coin", "rose", "gem", "bouquet", "lootbox", "other"
 Amount: amount of prize to give
 
 

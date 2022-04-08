@@ -28,6 +28,11 @@ module.exports.isStaff = (user) => {
   return false
 }
 
+module.exports.isDev = (user) => {
+  if(user.client.guilds.resolve(ids.server.sim).members.resolve(user.id).roles.cache.has(ids.devAss)) return true
+  return false
+}
+
 module.exports.updateXP = async (id, client) => {
   let guy = client.users.cache.get(id)
   let level = client.db.get(`level_${guy.id}`)
