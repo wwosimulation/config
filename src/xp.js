@@ -9,6 +9,7 @@ const teamMultipliers = {
   solovoting: 6,
   solokiller: 6,
   evil: 5,
+  tie: 2,
 }
 
 module.exports = { teamMultipliers }
