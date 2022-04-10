@@ -32,12 +32,12 @@ const addRoleProperty = (rolename, property, value) => {
 }
 
 let auras = {
-  Good: ["Villager", "Loudmouth", "Santa Claus", "Easter Bunny", "Doctor", "Bodyguard", "Tough Guy", "Red Lady", "Priest", "Seer", "Aura Seer", "Spirit Seer", "Seer Apprentice", "Detective", "Sheriff", "Mayor", "Avenger", "Pacifist", "Flower Child", "Grumpy Grandma", "Cupid", "President", "Cursed", "Loudmouth", "Wise Man", "Sibling", "Idiot", "Handsome Prince", "Drunk", "Grave Robber", "Pumpkin King", "Mortician"],
-  Evil: ["Werewolf", "Junior Werewolf", "Wolf Pacifist", "Wolf Shaman", "Wolf Seer", "Shadow Wolf", "Wolf Pacifist", "Nightmare Werewolf", "Werewolf Berserk", "Kitten Wolf", "Guardian Wolf", "Sorcerer", "Astral Wolf"],
+  Good: ["Villager", "Loudmouth", "Santa Claus", "Easter Bunny", "Doctor", "Bodyguard", "Tough Guy", "Red Lady", "Priest", "Seer", "Aura Seer", "Spirit Seer", "Seer Apprentice", "Detective", "Sheriff", "Mayor", "Avenger", "Pacifist", "Flower Child", "Grumpy Grandma", "Cupid", "President", "Cursed", "Loudmouth", "Wise Man", "Sibling", "Idiot", "Handsome Prince", "Drunk", "Grave Robber", "Pumpkin King", "Mortician", "Undertaker", "Analyst", "Werewolf Fan", "Instigator", "Trapper", "Night Watchman", "Preacher", "Baker", "Ghost Lady"],
+  Evil: ["Werewolf", "Junior Werewolf", "Wolf Pacifist", "Wolf Shaman", "Wolf Seer", "Shadow Wolf", "Wolf Pacifist", "Nightmare Werewolf", "Werewolf Berserk", "Kitten Wolf", "Guardian Wolf", "Sorcerer", "Astral Wolf", "Voodoo Werewolf", "Split Wolf", "Wolf Trickster"],
 }
 let teams = {
-  Village: ["Villager", "Doctor", "Bodyguard", "Tough Guy", "Red Lady", "Gunner", "Jailer", "Priest", "Marksman", "Seer", "Aura Seer", "Spirit Seer", "Seer Apprentice", "Detective", "Medium", "Mayor", "Witch", "Avenger", "Beast Hunter", "Pacifist", "Grumpy Grandma", "Cupid", "President", "Cursed", "Loudmouth", "Flower Child", "Sheriff", "Fortune Teller", "Forger", "Grave Robber", "Santa Claus", "Easter Bunny", "Sibling", "Drunk", "Mad Scientist", "Idiot", "Wise Man", "Doppelganger", "Naughty Boy", "Handsome Prince", "Sect Hunter", "Mortician", "Prognosticator", "Pumpkin King"],
-  Werewolf: ["Werewolf", "Junior Werewolf", "Wolf Pacifist", "Shadow Wolf", "Wolf Seer", "Kitten Wolf", "Wolf Shaman", "Alpha Werewolf", "Werewolf Berserk", "Nightmare Werewolf", "Guardian Wolf", "Kitten Wolf", "Sorcerer", "Lone Wolf", "Astral Wolf"],
+  Village: ["Villager", "Doctor", "Bodyguard", "Tough Guy", "Red Lady", "Gunner", "Jailer", "Priest", "Marksman", "Seer", "Aura Seer", "Spirit Seer", "Seer Apprentice", "Detective", "Medium", "Mayor", "Witch", "Avenger", "Beast Hunter", "Pacifist", "Grumpy Grandma", "Cupid", "President", "Cursed", "Loudmouth", "Flower Child", "Sheriff", "Fortune Teller", "Forger", "Grave Robber", "Santa Claus", "Easter Bunny", "Sibling", "Drunk", "Mad Scientist", "Idiot", "Wise Man", "Doppelganger", "Naughty Boy", "Handsome Prince", "Sect Hunter", "Mortician", "Prognosticator", "Pumpkin King", "Baker", "Vigilante", "Ritualist", "Trapper", "Instigator", "Analyst", "Night Watchman", "Warden", "Preacher", "Ghost Lady", "Undertaker"],
+  Werewolf: ["Werewolf", "Junior Werewolf", "Wolf Pacifist", "Shadow Wolf", "Wolf Seer", "Kitten Wolf", "Wolf Shaman", "Alpha Werewolf", "Werewolf Berserk", "Nightmare Werewolf", "Guardian Wolf", "Kitten Wolf", "Sorcerer", "Lone Wolf", "Astral Wolf", "Werewolf Fan", "Voodoo Werewolf", "Stubborn Wolf", "Split Wolf", "Wolf Trickster"],
   Zombie: ["Zombie"],
   Sect: ["Sect Leader", "Sect Member"],
   Bandit: ["Bandit", "Accomplice"],
@@ -61,7 +61,7 @@ for (let team in teams) {
   })
 }
 
-let soloKillers = ["Serial Killer", "Arsonist", "Bomber", "Corruptor", "Cannibal", "Illusionist", "Bandit", "Alchemist", "Hacker", "Dreamcatcher", "Jack"]
+let soloKillers = ["Serial Killer", "Arsonist", "Bomber", "Corruptor", "Cannibal", "Illusionist", "Bandit", "Alchemist", "Hacker", "Dreamcatcher", "Jack", "Evil Detective"]
 soloKillers.forEach((role) => {
   addRoleProperty(role, "soloKiller", true)
 })
