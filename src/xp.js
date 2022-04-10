@@ -8,6 +8,7 @@ const teamMultipliers = {
   modded: 5,
   solovoting: 6,
   solokiller: 6,
+  evil: 5,
 }
 
 module.exports = { teamMultipliers }
@@ -36,6 +37,12 @@ module.exports.lose = (playerCount) => {
   if (!playerCount) throw new Error(`${playerCount} is not a valid player count`)
   let val = 4 * playerCount
   return val
+}
+
+module.exports.tie = (playerCount) => {
+  playerCount = parseInt(playerCount)
+  if (!playerCount) throw new Error(`${playerCount} is not a valid player count`)
+  return 4 * playerCount * 2
 }
 
 /*
