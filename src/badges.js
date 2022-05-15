@@ -92,11 +92,12 @@ function badgesFilter(searchString) {
     return results
 }
 
-const embeds = badges.map((badge) => {
+const embeds = badges.map((badge, i) => {
     return {
         title: "Badges - " + badge.name,
         description: `**Name:** ${badge.name}\n**Description:** ${badge.description}\n**Requirement:** ${badge.requirement}`,
-        color: 7608756
+        color: 7608756, 
+        footer: {text: `${i}/${badges.length}`}
     }
 })
 
