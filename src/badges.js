@@ -97,7 +97,7 @@ const embeds = badges.map((badge, i) => {
         title: "Badges - " + badge.name,
         description: `**Name:** ${badge.name}\n**Description:** ${badge.description}\n**Requirement:** ${badge.requirement}`,
         color: 7608756, 
-        footer: {text: `${i}/${badges.length}`}
+        footer: {text: `${i+1}/${badges.length}`}
     }
 })
 
