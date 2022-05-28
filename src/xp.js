@@ -68,7 +68,7 @@ async function level(playerUser, xpToAdd, xpEmbed, channel) {
     })
   }
   playerUser.send({embeds}).catch(e => {
-    client.channels.cache.get("892046258737385473")?.send({ embeds, content: `<@${playerUser.id}>, I couldn't DM you!` })
+    channel.send({ embeds, content: `<@${playerUser.id}>, I couldn't DM you!` })
   })
 }
 
