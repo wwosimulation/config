@@ -1,3 +1,5 @@
+const players = require("../../schemas/players")
+
 const teamMultipliers = {
   village: 3,
   werewolf: 4,
@@ -45,6 +47,45 @@ module.exports.tie = (playerCount) => {
   if (!playerCount) throw new Error(`${playerCount} is not a valid player count`)
   return 4 * playerCount * 2
 }
+
+
+async function level(playerUser, xpToAdd, xpEmbed, channel) {
+  let embeds = [xpEmbed]
+  let playerObject = await players.findOne({user: playerUser.id})
+  await playerObject.update({$inc:{xp:xpToAdd}})
+  playerObject = await players.findOne({user: playerUser.id})
+  if(checkLevelUp(playerObject.level, playerObject.xp)) {
+    let update = {$inc:{"level": 1, "inventory.lootbox": 1}}
+    if(playerObject.level + 1 % 5 == 0) update.$inc["coins"] = 100
+    await playerObject.update(update)
+    embeds.push({
+      "title": `🎉 LEVEL UP! 🎉`,
+      "description": `Congrats! You are now level ${playerObject.level}!\n\nRewards:\n- 1 lootbox \n${playerObject.level % 5 == 0 ? "- 100 coins" : ""}`,
+      "color": 0x008800,
+      "thumbnail": {
+        "url": playerUser.avatarURL(),
+      }
+    })
+  }
+  playerUser.send({embeds}).catch(e => {
+    client.channels.cache.get("892046258737385473")?.send({ embeds, content: `<@${playerUser.id}>, I couldn't DM you!` })
+  })
+}
+
+/** 
+ * @param {integer} currentLevel
+ * @param {integer} currentXp
+ */
+function checkLevelUp(currentLevel, currentXp) {
+  var levelXP = 0
+  for(let i = 0; i <= currentLevel; i++) {
+    levelXP += 500+250*i
+  }
+  if(levelXP > currentXp) return false
+  return true
+}
+
+module.exports.level = level
 
 /*
 Proposed new xp system
