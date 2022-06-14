@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/wwosimulation/config#readme",
   "dependencies": {
-    "discord.js": "^13.5.1"
+    "discord.js": "^13.7.0"
   }
 }
