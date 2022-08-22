@@ -58,7 +58,7 @@ module.exports.roles.each((role) => {
 
   // Add team
   for (let team in teams) {
-    if(role.description.includes("**" + team.replace("Werewolf", "Werevolves") + "**")) {
+    if(role.description.includes("**" + team.replace("Werewolf", "Werevolves") + "**") && !role.description.includes("**Solo**")) {
       addRoleProperty(role.name, "team", team)
       break
     }
