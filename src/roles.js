@@ -6,7 +6,6 @@ Nothing in this file should be adjusted without a developer's assistance
 const { Collection } = require("discord.js")
 const descriptions = require("./descriptions.js")
 const icons = require("./icons.js")
-const { roles, allRoles } = require("./index.js")
 const defaultRole = {
   name: "Error! Please inform the developers about this!",
   icon: "https://cdn.discordapp.com/emojis/424929422190182422.png",
@@ -49,7 +48,7 @@ for (let desc in descriptions) {
   addRoleProperty(name, "icon", icons[desc])
 }
 
-roles.each((role) => {
+module.exports.roles.each((role) => {
   // Add aura
   if((role.name.toLowerCase().includes("wolf") || role.name === "Sorcerer") && !["Alpha Werewolf", "Stubborn Werewolf", "Werewolf Fan"].includes(role.name)) {
     addRoleProperty(role.name, "aura", "Evil")
