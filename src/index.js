@@ -9,13 +9,13 @@ const { allRoles, roles } = require("./roles.js")
 const aliases = require("./aliases.js")
 const getRole = (rolename) => {
   rolename = rolename.toLowerCase()
-  rolename = rolename.replace("-", " ")
+  rolename = rolename.replace("-", " ").replace(/\s+/g, "")
   rolename = aliases[rolename] ? aliases[rolename] : rolename
-  let foundRole = roles.find((x) => x.name.toLowerCase().startsWith(rolename))
+  console.log(roles[0])
+  let foundRole = roles.find(role => role.name.replace(/\s+/g, "") === rolename) || roles.find(role => aliases[rolename] === role.name) || roles.find(role => role.name.replace(/\s+/g, "").startsWith(rolename)) || roles.find(role => role.name.replace(/\s+/g, "").endsWith(rolename))
   if (!foundRole) return { name: "Unknown Role", description: "Unable to find that role!", icon: "https://cdn.discordapp.com/emojis/424929422190182422.png" }
   return foundRole
 }
-
 
 const { getEmoji } = require("./fn.js")
 
