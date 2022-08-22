@@ -8,7 +8,7 @@ const descriptions = require("./descriptions.js")
 const icons = require("./icons.js")
 const defaultRole = {
   name: "Error! Please inform the developers about this!",
-  icon: "https://cdn.discordapp.com/emojis/424929422190182422.png?v=1",
+  icon: "https://cdn.discordapp.com/emojis/424929422190182422.png",
   aura: "Unknown",
   team: "Solo",
   soloKiller: false,

@@ -107,6 +107,7 @@ module.exports = {
 // CUSTOM SOLO KILLER ROLES
   hacker: "You can hack two players per night using `+hack <player1> [player2]` (you can use this command once per night so use carefully). If a player is hacked once, you will know their role. If a player is hacked twice, they will die. You can also mute a hacked player by using `+mute`, making them not able to talk or vote for the day. Your aura is **Unknown** and you are a **Solo** team player.",
   jack: "During the day, you are able to select two people whether they would trick or treat and which option would kill them by using `+trickorteat <player1> <player2> (trick | treat)`. Your aura is **Unknown** and you are a **Solo** team player.",
+  dreamcatcher: "You can select a player every day by using `+hypnotize <player>`. At night, this person will be under your control, and you can use their abilities. At the end of the night, you attack the person that you are controlling. Your aura is **Unknown** and you are a **Solo** team player.",
 // RANDOM ROLES
   "random regular villager": "One of: Aura seer, Avenger, Baker, Beast hunter, Bodyguard, Doctor, Flower child, Forger, Ghost lady, Grave robber, Grumpy grandma, Loudmouth, Marksman, Mayor, Night watchman, Pacifist, Preacher, Priest, Red lady, Seer apprentice, Sheriff, Spirit seer, Tough guy, Trapper, Villager or Witch. You belong to the **Village** team.",
   "random strong villager": "One of: Analyst, Detective, Fortune teller, Gunner, Jailer, Medium, Mortician, Ritualist, Seer, Vigilante or Warden. You belong to the **Village** team.",
@@ -114,4 +115,16 @@ module.exports = {
   "random voting": "Headhunter or fool. You are a **Solo** team player.",
   "random killer": "One of: Alchemist, Arsonist, Bandit, Bomber, Cannibal, Corruptor, Illusionist, Sect leader, Serial killer or Zombie. You are a **Solo** team player.",
   random: "One random role. Your team is determined by the role.",
+// CLASSIC ROLES
+  "wise man": "You're the **Wise Man**. You are a regular villager, but you cannot be killed by the werewolves. Your aura is **Good** and you belong to the **Village**.",
+  "lone wolf": "You are the **Lone Wolf**. You are a werewolf that only wins alone. You appear as a regular werewolf to the rest of the werewolves. You only win if you are the last wolf alive! Your aura is **Unknown**. You are a **Solo** team player. This role is a werewolf classic role.",
+  idiot: "You're the **Idiot**! You are a regular villager, but you cannot be lynched by the village. You will lose your vote if you are lynched by the village. Your aura is **Good** and you belong to the **Village**!",
+  "mad scientist": "You're the **Mad Scientist**! You belong to the Village team. When you die, you release a toxin that kills two players which is next to you. Your aura is **Unknown**.",
+  sibling: "You're the **Sibling**! You belong to the **Village ** team. You are a regular villager, but you can chat with other Siblings in the village during the night. Your aura is **Good**.",
+  "naughty boy": "You're the **Naughty Boy**. Once a game, you can select two players to have their roles switched using `+switch [player 1] [player 2]`. This ability's effect takes place the next night. Your aura is **Unknown** and you belong to the **Village**.",
+  doppelganger: "You're the **Doppelganger **! During the first night you can select a player. If this player dies, you will take their role. You belongs to the **Village ** and your aura is **Unknown** until you get another role! Use `+copy [player number]` to select a player!",
+  drunk: "You're the **Drunk**. You are a regular villager, but you can't speak during the day. Your aura is **Good **and your belong to the **Village**.",
+  "handsome prince": "You're the **Handsome Prince**. You are a regular villager, but you cannot be lynched by the village. Your aura is **Good** and you belong to the **Village**.",
+  "sect hunter": "You're the **Sect Hunter**! Each night you can select a player with `+hunt [player number]`. If that player is in the Sect, they die. If you are in the sect, you lose the ability to hunt! You belong to the **Village** and your aura is **Unknown**!",
+  
 }
