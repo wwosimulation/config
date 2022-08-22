@@ -80,4 +80,6 @@ module.exports = {
   flag: "flagger",
   lock: "locksmith",
   keymaker: "locksmith",
+  ms: "mad scientist",
+  wm: "wise man",
 }
