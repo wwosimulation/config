@@ -11,7 +11,7 @@ const getRole = (rolename) => {
   rolename = rolename.toLowerCase()
   rolename = rolename.replace(/-/g, " ")
   rolename = aliases[rolename] ? aliases[rolename] : rolename
-  let foundRole = roles.find(role => role.name.toLowerCase() === rolename) || roles.find(role => role.name.toLowerCase().startsWith(rolename)) || roles.find(role => role.name.toLowerCase().endsWith(rolename))
+  let foundRole = roles.find(role => role.name.toLowerCase() === rolename) || roles.find(role => role.name.toLowerCase().startsWith(rolename)) || roles.find(role => role.name.toLowerCase().endsWith(rolename)) || roles.find(role => role.name.toLowerCase().includes(rolename))
   if (!foundRole) return { name: "Unknown Role", description: "Unable to find that role!", icon: "https://cdn.discordapp.com/emojis/424929422190182422.png" }
   return foundRole
 }
