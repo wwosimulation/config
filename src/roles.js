@@ -6,6 +6,7 @@ Nothing in this file should be adjusted without a developer's assistance
 const { Collection } = require("discord.js")
 const descriptions = require("./descriptions.js")
 const icons = require("./icons.js")
+const { roles, allRoles } = require("./index.js")
 const defaultRole = {
   name: "Error! Please inform the developers about this!",
   icon: "https://cdn.discordapp.com/emojis/424929422190182422.png",
@@ -31,29 +32,39 @@ const addRoleProperty = (rolename, property, value) => {
   module.exports.roles.set(rolename, role)
 }
 
-let auras = {
-  Good: ["Villager", "Loudmouth", "Santa Claus", "Easter Bunny", "Doctor", "Bodyguard", "Tough Guy", "Red Lady", "Priest", "Seer", "Aura Seer", "Spirit Seer", "Seer Apprentice", "Detective", "Sheriff", "Mayor", "Avenger", "Pacifist", "Flower Child", "Grumpy Grandma", "Cupid", "President", "Cursed", "Loudmouth", "Wise Man", "Sibling", "Idiot", "Handsome Prince", "Drunk", "Grave Robber", "Pumpkin King", "Mortician", "Undertaker", "Analyst", "Werewolf Fan", "Instigator", "Trapper", "Night Watchman", "Preacher", "Baker", "Ghost Lady", "Sorcerer"],
-  Evil: ["Werewolf", "Junior Werewolf", "Wolf Pacifist", "Wolf Shaman", "Wolf Seer", "Shadow Wolf", "Wolf Pacifist", "Nightmare Werewolf", "Werewolf Berserk", "Kitten Wolf", "Guardian Wolf", "Astral Wolf", "Voodoo Werewolf", "Split Wolf", "Wolf Trickster"],
-}
+// Not up to date. Teams are now added in line 59
 let teams = {
   Village: ["Villager", "Doctor", "Bodyguard", "Tough Guy", "Red Lady", "Gunner", "Jailer", "Priest", "Marksman", "Seer", "Aura Seer", "Spirit Seer", "Seer Apprentice", "Detective", "Medium", "Mayor", "Witch", "Avenger", "Beast Hunter", "Pacifist", "Grumpy Grandma", "Cupid", "President", "Cursed", "Loudmouth", "Flower Child", "Sheriff", "Fortune Teller", "Forger", "Grave Robber", "Santa Claus", "Easter Bunny", "Sibling", "Drunk", "Mad Scientist", "Idiot", "Wise Man", "Doppelganger", "Naughty Boy", "Handsome Prince", "Sect Hunter", "Mortician", "Prognosticator", "Pumpkin King", "Baker", "Vigilante", "Ritualist", "Trapper", "Instigator", "Analyst", "Night Watchman", "Warden", "Preacher", "Ghost Lady", "Undertaker"],
   Werewolf: ["Werewolf", "Junior Werewolf", "Wolf Pacifist", "Shadow Wolf", "Wolf Seer", "Kitten Wolf", "Wolf Shaman", "Alpha Werewolf", "Werewolf Berserk", "Nightmare Werewolf", "Guardian Wolf", "Kitten Wolf", "Sorcerer", "Lone Wolf", "Astral Wolf", "Werewolf Fan", "Voodoo Werewolf", "Stubborn Wolf", "Split Wolf", "Wolf Trickster"],
   Zombie: ["Zombie"],
   Sect: ["Sect Leader", "Sect Member"],
   Bandit: ["Bandit", "Accomplice"],
+  Instigator: ["Instigator"],
 }
 
-for (let aura in auras) {
-  auras[aura].forEach((role) => {
-    addRoleProperty(role, "aura", aura)
-  })
-}
 
 for (let desc in descriptions) {
   let name = desc.replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase())
   addRoleProperty(name, "description", descriptions[desc])
   addRoleProperty(name, "icon", icons[desc])
 }
+
+roles.each((role) => {
+  // Add aura
+  if((role.name.toLowerCase().includes("wolf") || role.name === "Sorcerer") && !["Alpha Werewolf", "Stubborn Werewolf", "Werewolf Fan"].includes(role.name)) {
+    addRoleProperty(role.name, "aura", "Evil")
+  } else if(role.description.includes("**Good**")) {
+    addRoleProperty(role.name, "aura", "Good")
+  }
+
+  // Add team
+  for (let team in teams) {
+    if(role.description.includes("**" + team.replace("Werewolf", "Werevolves") + "**")) {
+      addRoleProperty(role.name, "team", team)
+      break
+    }
+  }
+})
 
 for (let team in teams) {
   teams[team].forEach((role) => {

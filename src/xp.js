@@ -12,6 +12,7 @@ const teamMultipliers = {
   solokiller: 6,
   evil: 5,
   tie: 2,
+  instigator: 5,
 }
 
 module.exports = { teamMultipliers }
@@ -60,7 +61,7 @@ async function level(playerUser, xpToAdd, xpEmbed, channel) {
     await playerObject.update(update)
     embeds.push({
       "title": `🎉 LEVEL UP! 🎉`,
-      "description": `Congrats! You are now level ${playerObject.level}!\n\nRewards:\n- 1 lootbox \n${playerObject.level % 5 == 0 ? "- 100 coins" : ""}`,
+      "description": `Congrats! You are now level ${playerObject.level + 1}!\n\nRewards:\n- 1 lootbox \n${playerObject.level % 5 == 0 ? "- 100 coins" : ""}`,
       "color": 0x008800,
       "thumbnail": {
         "url": playerUser.avatarURL(),
