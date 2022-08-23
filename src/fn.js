@@ -4,8 +4,6 @@ This file has helper functions for the bot
 Nothing in this file should be adjusted
 
 */
-
-const { GuildMember, MessageActionRow } = require("discord.js")
 const ids = require("./ids.js")
 
 module.exports = {

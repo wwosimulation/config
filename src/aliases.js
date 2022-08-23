@@ -49,6 +49,7 @@ module.exports = {
   wwp: "wolf pacifist",
   shaman: "wolf shaman",
   wws: "wolf seer",
+  sum: "wolf summoner",
   alc: "alchemist",
   arso: "arsonist",
   bb: "bomber",
@@ -75,4 +76,10 @@ module.exports = {
   gl: "ghost lady",
   ed: "evil detective",
   spww: "split wolf",
+  vio: "violinist",
+  flag: "flagger",
+  lock: "locksmith",
+  keymaker: "locksmith",
+  ms: "mad scientist",
+  wm: "wise man",
 }
