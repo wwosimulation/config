@@ -61,7 +61,6 @@ module.exports.roles.each((role) => {
   if (roleTeam.length > 0) {
     roleTeam = roleTeam[1].replace(/\*/g, "").replace("Werewolves", "Werewolf")
     addRoleProperty(role.name, "team", roleTeam)
-    break
   }
   
 })
