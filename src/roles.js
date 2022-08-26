@@ -58,8 +58,8 @@ module.exports.roles.each((role) => {
 
   // Add team
   let roleTeam = role.description.match(/\*\*[A-Za-z]{1,15}\*\*/g)
-  if (roleTeam) {
-    roleTeam = roleTeam.replace(/\*/g, "").replace("Werewolves", "Werewolf")
+  if (roleTeam.length > 0) {
+    roleTeam = roleTeam[1].replace(/\*/g, "").replace("Werewolves", "Werewolf")
     addRoleProperty(role.name, "team", roleTeam)
     break
   }
