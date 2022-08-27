@@ -4,7 +4,11 @@ This file has helper functions for the bot
 Nothing in this file should be adjusted
 
 */
+
+const { Collection } = require("discord.js")
 const ids = require("./ids.js")
+
+let a = new Collection()
 
 module.exports = {
   isBeta: (id) => {
@@ -84,6 +88,19 @@ module.exports.sleep = (ms) => {
 }
 
 module.exports.getEmoji = (name, client) => {
+  if (!a.get("client")) {
+    if (!client) return "❌"
+    if (typeof client !== "object") {
+      if (typeof name !== "object") return "❌"
+      a.set("client", name)
+      name = client
+      client = a.get("client")
+    } else {
+      a.set("client", client)
+      client = a.get("client")
+    }
+  }
+  if (!client) client = a.get("client")
   return client.emojis.cache.find(emoji => emoji.name.toLowerCase() == name.toLowerCase() && emoji.available) ?? client.emojis.cache.find(emoji => emoji.name.toLowerCase() == "error")
 }
 
