@@ -100,7 +100,7 @@ module.exports = {
 // CUSTOM ROLES
   modded: "You are a modded role. When you receive this role, you will get further instructions from the narrator on what you are supposed to do.",
 // CUSTOM VILLAGE ROLES
-  undertaker: "After the first day, you may select a player using `+watch` to watch them. If that player is killed, you can know one of their teammates at the end of that game phase. You may only select one player per game. Your aura is **Good** and you belong to the **Village** team.",
+  undertaker: "After the first day, you may select a player using `+watch <player>` to watch them. If that player is killed, you can know one of their teammates at the end of that game phase. You may only select one player per game. Your aura is **Good** and you belong to the **Village** team.",
   prognosticator: "After the first night, you can announce that no one will die the next night by using `+peace`. After the first day, you can announce that the chosen player's vote will be taken away the next day by using `+terror <player>`. Your aura is **Unknown** and you belong to the **Village** team.",
 // CUSTOM WEREWOLF ROLES
   "astral wolf": "You are the Astral Wolf. During the day, you can give any non-wolf a blessing with `+bless <player>`, granting them the ability to see someone else's role the next night. After you give your blessing, you may mark up to three players using `+place <player 1> [player 2] [player 3]`. If any one of them dies, the remaining marked players will die with them. Your aura is **Evil** and you belong to the **Werewolves** team.",
