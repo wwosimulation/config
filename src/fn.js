@@ -27,7 +27,7 @@ module.exports.isStaff = (user) => {
 }
 
 module.exports.isDev = (user) => {
-  if(user.client.guilds.resolve(ids.server.sim).members.resolve(user.id).roles.cache.has(ids.devAss)) return true
+  if (user.client.guilds.resolve(ids.server.sim).members.resolve(user.id).roles.cache.has(ids.devAss)) return true
   return false
 }
 
@@ -38,7 +38,7 @@ module.exports.updateXP = async (id, client) => {
   let xp = data.xp
   let req = module.exports.nextLevel(level)
   if (xp > req) {
-   data.inventory.lootbox = data.inventory.lootbox + 1
+    data.inventory.lootbox = data.inventory.lootbox + 1
     client.db.add(`level_${guy.id}`, 1)
     guy.send(`Congrats! You have reached Level ${client.db.get(`level_${guy.id}`)}!\n\nYou have recieved a lootbox. To open it, do \`+use lootbox\`.`)
     module.exports.updateXP(id, client)
@@ -59,23 +59,13 @@ module.exports.emote = (name, client) => {
 
 module.exports.getUser = (input, message) => {
   if (!input) return message.member
-  input.replace(/([<@!>])+/g, "")
+  input = input.replace(/([<@!>])+/g, "")
   let target = message.guild.members.cache.get(input)
-  if (target == null) {
-    target = message.guild.members.cache.find((member) => member.user.tag === input || member.user.id === input || member.user.username === input || (member.nickname !== null && member.nickname === input))
-  }
-  if (target == null) {
-    target = message.guild.members.cache.find((member) => member.user.username.toLowerCase() + "#" + member.user.discriminator === input.toLowerCase() || member.user.username.toLowerCase() === input.toLowerCase() || (member.nickname !== null && member.nickname.toLowerCase() === input.toLowerCase()))
-  }
-  if (target == null) {
-    target = message.guild.members.cache.find((member) => member.user.username.startsWith(input) || member.user.username.toLowerCase().startsWith(input.toLowerCase()))
-  }
-  if (target == null) {
-    target = message.guild.members.cache.find((member) => (member.nickname !== null && member.nickname.startsWith(input)) || (member.nickname !== null && member.nickname.toLowerCase().startsWith(input.toLowerCase())))
-  }
-  if (target == null) {
-    target = message.guild.members.cache.find((member) => member.user.username.toLowerCase().includes(input.toLowerCase()) || (member.nickname !== null && member.nickname.toLowerCase().includes(input.toLowerCase())))
-  }
+  if (!target) target = message.guild.members.cache.find((member) => member.user.tag === input || member.user.id === input || member.user.username === input || (member.nickname !== null && member.nickname === input))
+  if (!target) target = message.guild.members.cache.find((member) => member.user.username.toLowerCase() + "#" + member.user.discriminator === input.toLowerCase() || member.user.username.toLowerCase() === input.toLowerCase() || (member.nickname !== null && member.nickname.toLowerCase() === input.toLowerCase()))
+  if (!target) target = message.guild.members.cache.find((member) => member.user.username.startsWith(input) || member.user.username.toLowerCase().startsWith(input.toLowerCase()))
+  if (!target) target = message.guild.members.cache.find((member) => (member.nickname !== null && member.nickname.startsWith(input)) || (member.nickname !== null && member.nickname.toLowerCase().startsWith(input.toLowerCase())))
+  if (!target) target = message.guild.members.cache.find((member) => member.user.username.toLowerCase().includes(input.toLowerCase()) || (member.nickname !== null && member.nickname.toLowerCase().includes(input.toLowerCase())))
   return target
 }
 
@@ -99,46 +89,46 @@ module.exports.peaceCheck = (message, db) => {
 }
 
 module.exports.dcActions = (message, db, alive) => {
-    let tempchan
-    let dc = message.guild.channels.cache.filter((c) => c.name === "priv-dreamcatcher").map((x) => x.id)
-    for (let i = 0; i < dc.length; i++) {
-        tempchan = dc[i]
-    }
-    let hypnotized = db.get(`hypnotized_${tempchan}`)
-    let tempguy = message.guild.members.cache.find((m) => m.nickname === hypnotized)
-    let role = message.guild.channels.cache.filter((c) => c.name === `priv-${db.get(`role_${tempguy.id}`).replace(" ", "-").toLowerCase()}`).map((x) => x.id)
-    for (let b = 0; b < role.length; b++) {
-        let chan = message.guild.channels.cache.get(role[b])
-        if (chan.permissionsFor(tempguy).has(["VIEW_CHANNEL", "READ_MESSAGE_HISTORY"])) {
-            if (tempguy.roles.cache.has(alive.id)) {
-                return {
-                    tempguy,
-                    chan,
-                    tempchan
-                }
-            }
+  let tempchan
+  let dc = message.guild.channels.cache.filter((c) => c.name === "priv-dreamcatcher").map((x) => x.id)
+  for (let i = 0; i < dc.length; i++) {
+    tempchan = dc[i]
+  }
+  let hypnotized = db.get(`hypnotized_${tempchan}`)
+  let tempguy = message.guild.members.cache.find((m) => m.nickname === hypnotized)
+  let role = message.guild.channels.cache.filter((c) => c.name === `priv-${db.get(`role_${tempguy.id}`).replace(" ", "-").toLowerCase()}`).map((x) => x.id)
+  for (let b = 0; b < role.length; b++) {
+    let chan = message.guild.channels.cache.get(role[b])
+    if (chan.permissionsFor(tempguy).has(["VIEW_CHANNEL", "READ_MESSAGE_HISTORY"])) {
+      if (tempguy.roles.cache.has(alive.id)) {
+        return {
+          tempguy,
+          chan,
+          tempchan
         }
-    } 
+      }
+    }
+  }
 }
 
 module.exports.capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
-module.exports.randomWeight = (options) => { 
-  var i; 
-  var weights = []; 
+module.exports.randomWeight = (options) => {
+  var i;
+  var weights = [];
   for (i = 0; i < options.length; i++) {
-    weights[i] = parseInt(Object.values(options[i])) + (weights[i - 1] || 0); 
+    weights[i] = parseInt(Object.values(options[i])) + (weights[i - 1] || 0);
   }
-  
-  var random = Math.random() * weights[weights.length - 1]; 
+
+  var random = Math.random() * weights[weights.length - 1];
   for (i = 0; i < weights.length; i++) {
     if (weights[i] > random) {
-      break; 
+      break;
     }
   }
-  return Object.keys(options[i])[0] 
+  return Object.keys(options[i])[0]
 }
 
 module.exports.disableButtons = (message) => {
