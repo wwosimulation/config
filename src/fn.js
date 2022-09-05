@@ -17,21 +17,17 @@ module.exports = {
 }
 
 module.exports.isNarrator = (user) => {
-  if (!user.guild) throw new Error("Not a guild member")
-  let narroles = user.guild.id == ids.server.sim ? [ids.minisim, ids.narratorsim] : [ids.mini, ids.narrator]
-  let isNarr = user.roles?.cache.filter((x) => narroles.includes(x.id))
-  if (isNarr.map((x) => x.id).length > 0) return true
-  return false
+  return user.client.guilds.resolve(ids.server.sim).members.resolve(user.id).roles.cache.hasAny(ids.minisim, ids.narratorsim)
 }
 module.exports.isStaff = (user) => {
-  if (!user.guild) throw new Error("Please pass a guildmember")
   let member = user.client.guilds.cache.get(ids.server.sim).members.cache.get(user.id)
-  if (member.roles.cache.has(ids.staff) || member.roles.cache.has(ids.afkstaff)) return true
+  if (member.roles.cache.hasAny(ids.staff, ids.afkstaff)) return true
   return false
 }
 
 module.exports.isDev = (user) => {
-  if (user.client.guilds.resolve(ids.server.sim).members.resolve(user.id).roles.cache.has(ids.devAss)) return true
+  let member = user.client.guilds.resolve(ids.server.sim).members.resolve(user.id)
+  if(member.roles.cache.hasAny(ids.devAss, ids.botDev)) return true
   return false
 }
 
