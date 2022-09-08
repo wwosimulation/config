@@ -86,7 +86,10 @@ module.exports.getEmoji = (name, client) => {
       client = a.get("client")
     }
   }
+  if (typeof name === "object" && typeof client === "object") return "❌"
+  if (typeof name === "object") name = client
   if (!client) client = a.get("client")
+  
   return client.emojis.cache.find(emoji => emoji.name.toLowerCase() == name.toLowerCase() && emoji.available) ?? client.emojis.cache.find(emoji => emoji.name.toLowerCase() == "error")
 }
 
@@ -99,6 +102,29 @@ module.exports.peaceCheck = (message, db) => {
     if (peace !== "none" && peace === nightCount) res = true
   }
   return res
+}
+
+module.exports.teammateCheck = ({ player: executioner, target: guy, db }) => {
+  if (!executioner || !guy) return "❌"
+  if (!db && !a.get("db")) "❌"
+  if (!db) db = a.get("db")
+  let player = db.get(`player_${executioner}`)
+  let target = db.get(`player_${guy}`)
+  let { cupid: cupid1, instigator: instigator1 } = player
+  let { cupid: cupid2, instigator: instigator2 } = player
+  if (!a.get("db")) a.set("db", db)
+  
+  let isCouple = cupid1?.filter(a => cupid2.includes(a)).length > 0 ? true : false
+  let isRecruit = instigator1?.filter(a => instigator2.includes(a)).length > 0 ? true : false
+  let isInstigator = instigator1 === guy ? true : false
+  
+  let result = {
+    couple: isCouple,
+    recruit: isRecruit,
+    instigator: isInstigator
+  }
+  
+  return result
 }
 
 module.exports.dcActions = (message, db, alive) => {
