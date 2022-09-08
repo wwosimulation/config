@@ -15,7 +15,7 @@ const getRole = (rolename) => {
   if (!foundRole && rolename.length > 1) {
     let arr = rolename.split(" ")
     arr.pop()
-    return getRole(arr.join(" "), client)
+    return getRole(arr.join(" "))
   }
   if (!foundRole) return { name: "Unknown Role", description: "Unable to find that role!", icon: "https://cdn.discordapp.com/emojis/424929422190182422.png" }
   return foundRole
