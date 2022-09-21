@@ -102,12 +102,15 @@ module.exports = {
 // CUSTOM VILLAGE ROLES
   undertaker: "https://cdn.discordapp.com/emojis/863076074844586004.png",
   prognosticator: "https://cdn.discordapp.com/attachments/494410148505321475/824031158761291837/Untitled146_20210206211029-1.png",
+  "lethal_seer": "https://media.discordapp.net/attachments/926803166006239252/1020631869374611567/Untitled13_20220917174239.png",
+  surrogate: "https://media.discordapp.net/attachments/926803166006239252/1020631869588504596/Untitled12_20220917151039.png",
 // CUSTOM WEREWOLF ROLES
   "astral wolf": "https://cdn.discordapp.com/emojis/957274648674983947.png",
 // CUSTOM SOLO KILLER ROLES
   hacker: "https://media.discordapp.net/attachments/859099353985974292/869924928332398622/Titelloses_8_20210727175848.png",
   jack: "https://cdn.discordapp.com/emojis/902219707187339265.png",
   dreamcatcher: "https://cdn.discordapp.com/emojis/786278096381804564.png",
+  harbinger: "https://media.discordapp.net/attachments/926803166006239252/1020631869815001168/Untitled11_20220917142655.png",
 // RANDOM ROLES
   "random regular villager": "https://cdn.discordapp.com/emojis/612982749334208517.png",
   "random strong villager": "https://cdn.discordapp.com/emojis/612982876723609631.png",
