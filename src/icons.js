@@ -102,7 +102,7 @@ module.exports = {
 // CUSTOM VILLAGE ROLES
   undertaker: "https://cdn.discordapp.com/emojis/863076074844586004.png",
   prognosticator: "https://cdn.discordapp.com/attachments/494410148505321475/824031158761291837/Untitled146_20210206211029-1.png",
-  "lethal_seer": "https://media.discordapp.net/attachments/926803166006239252/1020631869374611567/Untitled13_20220917174239.png",
+  "lethal seer": "https://media.discordapp.net/attachments/926803166006239252/1020631869374611567/Untitled13_20220917174239.png",
   surrogate: "https://media.discordapp.net/attachments/926803166006239252/1020631869588504596/Untitled12_20220917151039.png",
 // CUSTOM WEREWOLF ROLES
   "astral wolf": "https://cdn.discordapp.com/emojis/957274648674983947.png",
