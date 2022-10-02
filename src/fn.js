@@ -114,8 +114,8 @@ module.exports.teammateCheck = ({ player: executioner, target: guy, db }) => {
   let { cupid: cupid2, instigator: instigator2 } = target
   if (!a.get("db")) a.set("db", db)
   
-  let isCouple = (cupid1?.filter(a => cupid2.includes(a)).length > 0 ? true : false) || (player.couple === target.id)
-  let isRecruit = instigator1?.filter(a => instigator2.includes(a)).length > 0 ? true : false
+  let isCouple = (cupid1?.filter(a => cupid2?.includes(a)).length > 0 ? true : false) || (player.couple === target.id)
+  let isRecruit = instigator1?.filter(a => instigator2?.includes(a)).length > 0 ? true : false
   let isInstigator = instigator1 === guy ? true : false
   
   let result = {
